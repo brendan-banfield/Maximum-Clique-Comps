@@ -67,6 +67,9 @@ class Simulated_Annealing_Solver:
     
     def is_completed(self):
         return self.completed
+    
+    def found_clique(self):
+        return self.succeeded
         
 
     def run(self):
@@ -74,12 +77,14 @@ class Simulated_Annealing_Solver:
             self.update()
         return f"Succeeded: {self.succeeded}, best score: {self.best_score}"
 
-    
+Graph.test_algorithm(Simulated_Annealing_Solver, 100, 0.001, 0.9998)
 
-graph = Graph.get_graph_from_dataset('C250.9')
-solver = Simulated_Annealing_Solver(graph, 44, 100, 0.001, 0.9998) 
-graph.visualize_algorithm(solver, 0.01)
-# for i in range(20):
-#     solver = Simulated_Annealing_Solver(graph, 44, 100, 0.001, 0.9998) 
-#     print(solver.run())
-#     # print(simulated_annealing(graph, 44, 100, 0.001, 0.9998))
+graph = Graph.get_graph_from_dataset('hamming8-4')
+solver = Simulated_Annealing_Solver(graph, 16, 100, 0.001, 0.9998) 
+graph.visualize_algorithm(solver, 0.01, False)
+for i in range(20):
+    solver = Simulated_Annealing_Solver(graph, 16, 100, 0.001, 0.9998) 
+    print(solver.run())
+    # if solver.succeeded:
+    print(solver.best_nodes)
+    # print(simulated_annealing(graph, 44, 100, 0.001, 0.9998))
