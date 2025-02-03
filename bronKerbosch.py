@@ -1,6 +1,7 @@
 from graphs import Graph
 
 class Bron_Kerbosch_Solver:
+    is_decision_problem = False
     def __init__(self, graph: Graph):
         self.graph = graph
         self.adjacencyList = self.graph.get_adj_list()
@@ -57,7 +58,6 @@ class Bron_Kerbosch_Solver:
 
 
 if __name__ == "__main__":
-    baby_graph = Graph(5, [(0, 1), (1, 2), (0, 2), (3, 1), (3, 4)])
     graph = Graph(7, [(0,1), (0,2), (0,3), (1,2), (1,3), (2,3), (1,4), (3,4), (4,6), (3,5)])
     solver = Bron_Kerbosch_Solver(graph)
     print(solver.run())

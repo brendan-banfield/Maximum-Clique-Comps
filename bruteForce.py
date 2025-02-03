@@ -3,6 +3,7 @@ from math import pow
 from bitarray import bitarray
 
 class Brute_Force_Solver:
+    is_decision_problem = True
     def __init__(self, g: Graph, k: int, visualize: bool = False):
         self.g = g
         self.k = k
@@ -38,9 +39,10 @@ class Brute_Force_Solver:
                 self.cliques_found.append(self.permutation.copy())
         
         
-        for clique in self.cliques_found:
-            print(clique)
+        # for clique in self.cliques_found:
+        #     print(clique)
         return max([clique.count(1) for clique in self.cliques_found])
+
 
 
 # test the algo
