@@ -3,6 +3,7 @@ import random
 import math
 
 class Simulated_Annealing_Solver:
+    is_decision_problem = True
     def __init__(self, graph: Graph, k: int, T_0: float, T_f: float, alpha: float, visualize: bool = False):
         self.graph = graph
         self.k = k

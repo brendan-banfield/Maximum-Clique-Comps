@@ -1,6 +1,7 @@
 from graphs import Graph
 
 class Bron_Kerbosch_Solver:
+    is_decision_problem = False
     def __init__(self, graph: Graph):
         self.graph = graph
         self.adjacencyList = self.graph.get_adj_list()
