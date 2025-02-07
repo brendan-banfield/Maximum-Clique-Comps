@@ -4,7 +4,7 @@ This program returns the largest clique and the size of it.
 I removed the print statements from this one, so it should
 run faster and have cleaner output.
 
-It DOES require that, in graphs.py, populate_adj_list() likes like:
+It DOES require that, in graphs.py, populate_adj_list() looks like:
 
 def populate_adj_list(self) -> None:
         self.adj_list = [[] for _ in range(self.vertices)]
@@ -192,7 +192,7 @@ def main():
     # Runs the branch and bound
     Qmax = MaxClique(R, C, my_graph, Q, Qmax)
 
-    # Spits out hte results
+    # Spits out the results
     print('Final max clique:')
     print(Qmax)
     print('Final max clique size:')
