@@ -38,11 +38,54 @@ class Bron_Kerbosch_Solver:
             candidates_P.remove(v)
             not_X.append(v)
 
+    '''solves Bron Kerbosch with a pivot vertex'''
+    #choosing pivot based on og paper version 1
     def pivot_solver(self, P, R, X):
-        pass
+        if not P:
+            if not X:
+                self.maximal_cliques.append(R)
+            return
+        
+        pivot = 0
+        max_nbrs = 0
+        pivot_nbrs = set()
+        print(P | X)
+        for node in (P | X):
+            print(node)
+            # node = int(node)
+            nbrs_of_node = set(self.adjacencyList[int(node)])
+            if len(nbrs_of_node & P) > max_nbrs:
+                max_nbrs = len(nbrs_of_node & P)
+                pivot = int(node)
+                pivot_nbrs = nbrs_of_node
+
+
+        loop_P = P - pivot_nbrs
+        list_P = list(loop_P)
+        # for node in P:
+            # if P(i) in self.adjacencyList(pivot):        
+            #     v = P[i]
+            # if node not in self.adjacencyList[pivot]:
+        i = 0
+        while i < len(list_P):
+            v = list_P[i]      
+            new_R = R.copy()
+            new_R.add(v)
+
+            
+            nbrs_v = set(self.adjacencyList[v])
+            new_P = P & nbrs_v
+            
+            new_X = X & nbrs_v
+
+            self.pivot_solver(new_P, new_R, new_X)
+            P.remove(v)
+            list_P.remove(v)
+            X.add(v)
     
     '''finds the maximum clique among the maximal cliques produced'''
     def get_maximum_clique(self):
+        max_clique_val = 0
         if self.maximal_cliques:
             max_clique_val = len(self.maximal_cliques[0])
             max_clique_index = 0
@@ -58,17 +101,26 @@ class Bron_Kerbosch_Solver:
         return self.succeeded
 
     def run(self):
-        candidates = [i for i in range(self.graph.vertices)]
-        compsub = []
-        not_x = []
-        self.no_pivot_solver(candidates, compsub, not_x)
+        # candidates = {}
+        # for i in range(self.graph.vertices):
+        #     candidates.append((i, len(self.adjacencyList[i])))
+
+        # candidates = {i for i in range(self.graph.vertices)}
+        candidates = set()
+        for i in range(self.graph.vertices):
+            candidates.add(i)
+        compsub = set()
+        not_x = set()
+        # self.no_pivot_solver(candidates, compsub, not_x)
+        self.pivot_solver(candidates, compsub, not_x)
         return self.get_maximum_clique()
 
 
 if __name__ == "__main__":
-    baby_graph = Graph(5, [(0, 1), (1, 2), (0, 2), (3, 1), (3, 4)])
-    #graph = Graph(7, [(0,1), (0,2), (0,3), (1,2), (1,3), (2,3), (1,4), (3,4), (4,6), (3,5)])
-    solver = Bron_Kerbosch_Solver(baby_graph)
+    # baby_graph = Graph(5, [(0, 1), (1, 2), (0, 2), (3, 1), (3, 4)])
+    # solver = Bron_Kerbosch_Solver(baby_graph)
+    graph = Graph(7, [(0,1), (0,2), (0,3), (1,2), (1,3), (2,3), (1,4), (3,4), (4,6), (3,5)])
+    solver = Bron_Kerbosch_Solver(graph)
     print(solver.run())
     print(solver.maximal_cliques)
     #Graph.test_algorithm(Bron_Kerbosch_Solver)
