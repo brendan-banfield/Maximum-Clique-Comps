@@ -23,6 +23,7 @@ class Graph:
 
         self.adj_list: list[list[int]] = None
         self.adj_matrix: list[list[bool]] = None
+        self.adj_sets: list[set[int]] = None
         self.bitvectors: list[bitarray] = None
 
     def populate_adj_list(self) -> None:
@@ -44,6 +45,12 @@ class Graph:
                 self.adj_matrix[v][u] = 1
                 self.adj_matrix[u][v] = 1
 
+    def populate_adj_sets(self) -> None:
+        self.adj_sets = [set() for _ in range(self.vertices)]
+        for edge in self.edges:
+            self.adj_sets[edge[0]].add(edge[1])
+            self.adj_sets[edge[1]].add(edge[0])
+
     def populate_bitvectors(self) -> None:
         adj_matrix = self.get_adj_matrix()
         bitvectors = []
@@ -62,6 +69,11 @@ class Graph:
         if self.adj_matrix is None:
             self.populate_adj_matrix()
         return self.adj_matrix
+    
+    def get_adj_sets(self) -> list[set[int]]:
+        if self.adj_sets is None:
+            self.populate_adj_sets()
+        return self.adj_sets
     
     def get_bitvectors(self) -> list[bitarray]:
         if self.bitvectors is None:
