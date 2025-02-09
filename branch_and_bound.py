@@ -20,6 +20,10 @@ to prevent the program from hitting an indexing error. I don't know if changing 
 break anyone else's code, so I'm just keeping the modified version in my local repository.
 - Kellen
 
+Fixed; create_subgraph was creating a graph using the same vertex labels as the parent graph, but setting a lower number of vertices,
+so there were out of bounds edges. I made the subgraph have the same vertex count as the original. This might not be optimal, we can look at it later.
+- Brendan
+
 '''
 
 import graphs
@@ -31,7 +35,7 @@ def create_subgraph(parent_graph, vertices):
             (u, v) for (u, v) in parent_graph.edges if u in vertices and v in vertices
         ]
 
-    return graphs.Graph(len(vertices), edges)
+    return graphs.Graph(parent_graph.vertices, edges)
 
 # Returns the list of adjacent nodes to the given node
 def get_neighbors(graph, node):
