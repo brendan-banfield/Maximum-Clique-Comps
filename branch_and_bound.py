@@ -34,10 +34,12 @@ class Branch_and_Bound_Solver:
     def __init__(self, graph: Graph):
         self.graph = graph
         self.completed = False
+        self.succeeded = False
         self.max_clique = 0
 
     def get_maximum_clique(self) -> int:
-        self.run()
+        if not self.completed:
+            self.run()
         return self.max_clique
 
     def run(self):
@@ -63,6 +65,7 @@ class Branch_and_Bound_Solver:
         # print(len(Qmax))
         self.max_clique = len(Qmax)
         self.completed = True
+        self.succeeded = True
 
     def update(self):
         pass
@@ -79,6 +82,10 @@ class Branch_and_Bound_Solver:
     
     
     # Returns the list of adjacent nodes to the given node
+    # 
+    # From what I can tell none of these failsafes can/should be reached. I'll leave this for now, but 
+    # we may want to remove it so that we get error messages if something actually does go wrong
+    # - Brendan
     def get_neighbors(self, graph, node):
 
         adj_list = graph.get_adj_list()
@@ -100,11 +107,12 @@ class Branch_and_Bound_Solver:
     
     # Returns a list of intersecting elements
     def get_intersect(self, list1, list2):
-        intersection = []
-        for element in list1:
-            if element in list2:
-                intersection.append(element)
-        return intersection
+        return list(set(list1) & set(list2))
+        # intersection = []
+        # for element in list1:
+        #     if element in list2:
+        #         intersection.append(element)
+        # return intersection
     
 
     # Adds all of our vertices to R (as ints starting from 0)
@@ -227,4 +235,5 @@ def main():
 
     Graph.test_algorithm(Branch_and_Bound_Solver)
 
-main()
+if __name__ == "__main__":
+    main()

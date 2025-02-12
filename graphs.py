@@ -10,6 +10,7 @@ if missing import
 '''
 from bitarray import bitarray
 
+
 class Graph:
     def __init__(self, num_vertices: int, edges: list[tuple], max_clique_size = None, max_clique_elements = None):
         self.vertices: int = num_vertices
@@ -289,11 +290,34 @@ class Graph:
             return Graph(num_vertices, edges)
             # return Graph(num_vertices, edges, max_clique_size=clique_size, max_clique_elements=clique)
 
+
+def test_increasing_graphs(solvers: list, starting_size, edge_probability):
+    # each element in solver_classes should be (algorithm_class, *args, **kwargs)
+    n = starting_size
+    while True:
+        graph = Graph.create_random_graph(n, edge_probability)
+        print(f'Graph size: {n}')
+        k = 0
+        for (solver_class, args, kwargs) in solvers:
+            print(f'{solver_class.__name__}:')
+            if solver_class.is_decision_problem:
+                solver = solver_class(graph, k, *args, **kwargs)
+            else:
+                solver = solver_class(graph, *args, **kwargs)
+            time1 = time.time()
+            solver.solve()
+            time2 = time.time()
+            if not solver_class.is_decision_problem:
+                k = solver.get_maximum_clique()
+            print(f'Algorithm {solver_class.__name__} took time: {time2 - time1}. Succeeded: {solver.succeeded}')
+        n += 1
+    
+
 if __name__ == '__main__':
     # graph = Graph.get_graph_from_dataset('p_hat300-3')
     graph = Graph(5, [(0, 1), (1, 2), (0, 2), (3, 1), (3, 4)] )
     print(graph.vertices)
     print(graph.get_adj_matrix())
-    adj_list = graph.get_adj_list()
+    # adj_list = graph.get_adj_list()
     # print([len(adj_list[i]) for i in range(graph.vertices)])
     # print([len(adj_list[i]) for i in range(graph.vertices)])
