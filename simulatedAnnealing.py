@@ -3,7 +3,8 @@ import random
 import math
 
 class Simulated_Annealing_Solver:
-    def __init__(self, graph: Graph, k: int, T_0: float, T_f: float, alpha: float, visualize: bool = False):
+    is_decision_problem = True
+    def __init__(self, graph: Graph, k: int, T_0: float, T_f: float, alpha: float):
         self.graph = graph
         self.k = k
         self.T_0 = T_0
@@ -12,6 +13,9 @@ class Simulated_Annealing_Solver:
         self.alpha = alpha
         self.completed = False
         self.succeeded = False
+
+        self.improved_score = 0
+        self.total_iterations = 0
         self.setup()
 
     def connectedness_delta(self, v1, v2):
@@ -45,6 +49,10 @@ class Simulated_Annealing_Solver:
         v1 = random.randint(0, self.k - 1)
         v2 = random.randint(self.k, self.graph.vertices - 1)
         c_delta = self.connectedness_delta(v1, v2)
+
+        if c_delta > 0:
+            self.improved_score += 1
+        self.total_iterations += 1
         
         if c_delta > 0 or random.random() < math.exp(c_delta / self.T):
             self.permutation[v1], self.permutation[v2] = self.permutation[v2], self.permutation[v1]
@@ -75,16 +83,20 @@ class Simulated_Annealing_Solver:
     def run(self):
         while not self.completed:
             self.update()
+        print(f"Improved score {self.improved_score} / {self.total_iterations}")
         return f"Succeeded: {self.succeeded}, best score: {self.best_score}"
 
-Graph.test_algorithm(Simulated_Annealing_Solver, 100, 0.001, 0.9998)
+if __name__ == "__main__":
+        
+    Graph.test_algorithm(Simulated_Annealing_Solver, 100, 0.001, 0.9998)
 
-graph = Graph.get_graph_from_dataset('hamming8-4')
-solver = Simulated_Annealing_Solver(graph, 16, 100, 0.001, 0.9998) 
-graph.visualize_algorithm(solver, 0.01, False)
-for i in range(20):
-    solver = Simulated_Annealing_Solver(graph, 16, 100, 0.001, 0.9998) 
+    hard_graph = Graph.get_graph_from_dataset('C125.9')
+    solver = Simulated_Annealing_Solver(hard_graph, 16, 100, 0.001, 0.9998) 
     print(solver.run())
-    # if solver.succeeded:
-    print(solver.best_nodes)
-    # print(simulated_annealing(graph, 44, 100, 0.001, 0.9998))
+    # graph.visualize_algorithm(solver, 0.01, False)
+    # for i in range(20):
+    #     solver = Simulated_Annealing_Solver(graph, 16, 100, 0.001, 0.9998) 
+    #     print(solver.run())
+    #     # if solver.succeeded:
+    #     print(solver.best_nodes)
+    #     # print(simulated_annealing(graph, 44, 100, 0.001, 0.9998))
