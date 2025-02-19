@@ -180,16 +180,16 @@ class Genetic_Solver:
         # if we make an improvement, set stagnancy to 0
         if best_child.count() > similar_parent.count(): # test if improves on similar parent
             similar_parent[:] = best_child # need [:] to modify inplace
-            self.stagnancy = 0
+            self.stagnant_count = 0
         elif best_child.count() > other_parent.count(): # test if improves on other parent
             other_parent[:] = best_child
-            self.stagnancy = 0
+            self.stagnant_count = 0
         elif best_child.count() > min([chrom.count() for chrom in self.population]): # test if improves on worst member of population
             worst_chrom = min(self.population, key=lambda chrom: chrom.count())
             worst_chrom[:] = best_child
-            self.stagnancy = 0
+            self.stagnant_count = 0
         else:
-            self.stagnancy += 1
+            self.stagnant_count += 1
     
     def hamming_dist(self,bit1,bit2):
         return (bit1 ^ bit2).count()
@@ -200,6 +200,6 @@ class Genetic_Solver:
 
 
 
-graph = Graph.get_graph_from_dataset('brock400_1')
+graph = Graph.get_graph_from_dataset('johnson32-2-4')
 solver = Genetic_Solver(graph)
 print(solver.run())
