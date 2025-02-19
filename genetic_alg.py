@@ -14,6 +14,8 @@ if missing import
 from bitarray import bitarray
 
 class Genetic_Solver:
+    is_decision_problem = False
+
     def __init__(self, graph: Graph, population_size: int = 50, visualize: bool = False, stagnancy: int = 50, num_cuts_init: int = 10, mutate_prob_init: float = .5):
         self.graph = graph
         self.reordered_vertices = None
@@ -197,9 +199,15 @@ class Genetic_Solver:
     def vert_adjacent_all(self, vert_id, subgraph):
         adjacent_to = self.graph.bitvectors[vert_id] & subgraph
         return adjacent_to.count() == subgraph.count()
+    
+
+    def get_maximum_clique(self):
+        return self.best_score
 
 
 
-graph = Graph.get_graph_from_dataset('brock400_1')
-solver = Genetic_Solver(graph)
-print(solver.run())
+if __name__ == '__main__':
+    # graph = Graph.get_graph_from_dataset('c-fat200-1')
+    graph = Graph.get_graph_from_dataset('johnson32-2-4')
+    solver = Genetic_Solver(graph)
+    print(solver.run())
