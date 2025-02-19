@@ -42,13 +42,12 @@ class Genetic_Solver:
         self.population = self.generate_initial_chromosomes()
         while self.stagnant_count < self.stagnancy:
             self.update()
-        self.best_clique = max(self.population, key=lambda chrom: chrom.count())
-        self.best_score = self.best_clique.count()
+        self.best_clique = max(self.population, key=lambda chrom: self.fitness(chrom))
         
         # ensure is actually clique
         assert self.graph.is_clique(self.best_clique), "Solution found was not clique"
         
-        return f"Largest clique found was {self.best_clique.to01()} with {self.best_score} nodes."
+        return f"Largest clique found was {self.best_clique.to01()} with {self.fitness(self.best_clique)} nodes."
         
 
     def update(self):
@@ -105,7 +104,14 @@ class Genetic_Solver:
         return subset
 
     def fitness(self, clique):
-        return np.sqrt(clique.count())
+        return clique.count()
+
+    def fitness_scaled(self, clique):
+        # change this
+        scale_fn = np.sqrt
+        return scale_fn(self.fitness(clique))
+
+    
     
     def select_parents(self):
         # scale clique size with np.sqrt. Since cliques are all locally maximal, clique.count() >= 2 if graph connected,
@@ -173,7 +179,7 @@ class Genetic_Solver:
                 clique[v] = 1
     
     def replace(self, p1, p2, c1, c2):
-        best_child = c1 if c1.count() > c2.count() else c2
+        best_child = c1 if self.fitness(c1) > self.fitness(c2) else c2
         if self.hamming_dist(p1,best_child) < self.hamming_dist(p2,best_child):
             similar_parent = p1
             other_parent = p2
@@ -182,14 +188,14 @@ class Genetic_Solver:
             other_parent = p1
         
         # if we make an improvement, set stagnancy to 0
-        if best_child.count() > similar_parent.count(): # test if improves on similar parent
+        if self.fitness(best_child) > self.fitness(similar_parent): # test if improves on similar parent
             similar_parent[:] = best_child # need [:] to modify inplace
             self.stagnant_count = 0
-        elif best_child.count() > other_parent.count(): # test if improves on other parent
+        elif self.fitness(best_child) > self.fitness(other_parent): # test if improves on other parent
             other_parent[:] = best_child
             self.stagnant_count = 0
-        elif best_child.count() > min([chrom.count() for chrom in self.population]): # test if improves on worst member of population
-            worst_chrom = min(self.population, key=lambda chrom: chrom.count())
+        elif self.fitness(best_child) > min([self.fitness(chrom) for chrom in self.population]): # test if improves on worst member of population
+            worst_chrom = min(self.population, key=lambda chrom: self.fitness(chrom))
             worst_chrom[:] = best_child
             self.stagnant_count = 0
         else:
