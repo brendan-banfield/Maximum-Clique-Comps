@@ -251,14 +251,17 @@ class Graph:
     
     def get_graph_from_dataset(dataset_name: str) -> 'Graph':
         DIMACS_names = [os.path.splitext(name)[0] for name in os.listdir('datasets/DIMACS/')]
+        protein_names = [os.path.splitext(name)[0] for name in os.listdir('datasets/proteinProductGraphs/')]
         if dataset_name in DIMACS_names:
-            return Graph.import_DIMACS_graph(dataset_name)
+            return Graph.import_DIMACS_graph(f"DIMACS/{dataset_name}.clq")
+        elif dataset_name in protein_names:
+            return Graph.import_DIMACS_graph(f"proteinProductGraphs/{dataset_name}")
         else:
             raise ValueError(f'Dataset {dataset_name} not found')
         
 
-    def import_DIMACS_graph(dataset_name: str) -> 'Graph':
-        with open(f'datasets/DIMACS/{dataset_name}.clq', 'r') as f:
+    def import_DIMACS_graph(path_from_datasets) -> 'Graph':
+        with open(f'datasets/{path_from_datasets}', 'r') as f:
             lines = f.readlines()
             cur_line = 0
             # the files do not have a consistent format for the header, which may or may not contain information about how big
@@ -282,7 +285,7 @@ class Graph:
             while not lines[cur_line].startswith('p'):
                 cur_line += 1
             num_vertices = int(lines[cur_line].split()[2])
-            num_edges = int(lines[cur_line].split()[3])
+            # num_edges = int(lines[cur_line].split()[3])
             edges = []
             for line in lines[cur_line + 1:]:
                 if line[0] == 'e':
