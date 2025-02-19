@@ -14,7 +14,7 @@ if missing import
 from bitarray import bitarray
 
 class Genetic_Solver:
-    def __init__(self, graph: Graph, population_size: int = 50, visualize: bool = False, stagnancy: int = 50, num_cuts_init: int = 10, mutate_prob_init: float = .5):
+    def __init__(self, graph: Graph, population_size: int = 500, visualize: bool = False, stagnancy: int = 50, num_cuts_init: int = 10, mutate_prob_init: float = .5):
         self.graph = graph
         self.reordered_vertices = None
         self.population_size = population_size
@@ -103,10 +103,14 @@ class Genetic_Solver:
         
         # subset is a clique
         return subset
+
+    def fitness(self, clique):
+        return np.sqrt(clique.count())
     
     def select_parents(self):
-        # need to implement scaling of fitness vals, paper not clear enough- log probs?
-        fitness_vals = np.array([clique.count() for clique in self.population])
+        # scale clique size with np.sqrt. Since cliques are all locally maximal, clique.count() >= 2 if graph connected,
+        # and clique.count() >= 1 always.
+        fitness_vals = np.array([self.fitness(clique) for clique in self.population])
         fitness_vals = fitness_vals / sum(fitness_vals)
         pop_idx = range(self.population_size)
         
@@ -200,6 +204,6 @@ class Genetic_Solver:
 
 
 
-graph = Graph.get_graph_from_dataset('johnson32-2-4')
+graph = Graph.get_graph_from_dataset('brock400_3')
 solver = Genetic_Solver(graph)
 print(solver.run())
