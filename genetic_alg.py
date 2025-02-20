@@ -209,7 +209,7 @@ class Genetic_Solver:
         return adjacent_to.count() == subgraph.count()
 
 
-
-graph = Graph.get_graph_from_dataset('brock400_3')
-solver = Genetic_Solver(graph)
-print(solver.run())
+if __name__ == '__main__':
+    graph = Graph.get_graph_from_dataset('brock400_3')
+    solver = Genetic_Solver(graph)
+    print(solver.run())
