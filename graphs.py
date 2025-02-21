@@ -84,8 +84,8 @@ class Graph:
     '''
     Takes a bitvector as input and returns true if the bitvector represents a clique
     A 1 in the bitvector means that the vertex at that index is in the clique
-    
     '''
+
     def is_clique(self, bitvector) -> bool:
         bitvectors = self.get_bitvectors()
         bits = bitvector.copy()
@@ -302,7 +302,7 @@ class Graph:
         return num_edges/possible_edges
     
     def degree_variance(self):
-        degrees = [edges.count() for edges in self.bitvectors]
+        degrees = [edges.count() for edges in self.get_bitvectors()]
         mean_deg = (2 * len(self.edges)) / self.vertices
         return sum([(deg - mean_deg)**2 for deg in degrees]) / self.vertices
     
@@ -314,7 +314,7 @@ class Graph:
         # count triangles
         num_triangles = 0
         v_enum = range(self.vertices)
-        e = self.adj_matrix
+        e = self.get_adj_matrix()
         for i in v_enum:
             for j in v_enum:
                 for k in v_enum:
@@ -324,12 +324,12 @@ class Graph:
 
         return num_triangles / num_triplets
     
-    def print_properties(self, show_cluster_coef=True):
+    def print_properties(self, show_cluster_coef=False):
         print(f"Vertices: {self.vertices}")
         print(f"Edges: {len(self.edges)}")
         print(f"Edge Density: {self.edge_density()}")
         print(f"Degree Variance: {self.degree_variance()}")
-        if show_cluster_coef: # takes a while for large graphs
+        if show_cluster_coef:
             print(f"Clustering Coefficient: {self.clustering_coefficient()}")
 
 
