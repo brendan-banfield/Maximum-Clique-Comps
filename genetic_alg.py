@@ -5,6 +5,7 @@
 from graphs import Graph
 import random
 import numpy as np # to sample with replacement
+import sys
 
 '''
 run
@@ -214,6 +215,10 @@ class Genetic_Solver:
 
 
 if __name__ == '__main__':
-    graph = Graph.get_graph_from_dataset('brock400_3')
-    solver = Genetic_Solver(graph)
-    print(solver.run())
+    args = sys.argv
+    if len(args) > 1:
+        graph = Graph.get_graph_from_dataset(args[1])
+        solver = Genetic_Solver(graph)
+        graph.print_properties()
+        print(solver.run())
+        

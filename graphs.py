@@ -293,6 +293,46 @@ class Graph:
             return Graph(num_vertices, edges)
             # return Graph(num_vertices, edges, max_clique_size=clique_size, max_clique_elements=clique)
 
+    '''
+    Graph properties:
+    '''
+    def edge_density(self):
+        num_edges = len(self.edges)
+        possible_edges = (self.vertices * (self.vertices - 1)) / 2
+        return num_edges/possible_edges
+    
+    def degree_variance(self):
+        degrees = [edges.count() for edges in self.bitvectors]
+        mean_deg = (2 * len(self.edges)) / self.vertices
+        return sum([(deg - mean_deg)**2 for deg in degrees]) / self.vertices
+    
+    # number of triangles / number of triplets of vertices
+    # like edge density but for triples
+    def clustering_coefficient(self):
+        num_triplets = self.vertices * (self.vertices - 1) * (self.vertices - 2)
+
+        # count triangles
+        num_triangles = 0
+        v_enum = range(self.vertices)
+        e = self.adj_matrix
+        for i in v_enum:
+            for j in v_enum:
+                for k in v_enum:
+                    # e[x][y] = e[y][x]
+                    if e[i][j] and e[j][k] and e[k][i]:
+                        num_triangles += 1
+
+        return num_triangles / num_triplets
+    
+    def print_properties(self, show_cluster_coef=True):
+        print(f"Vertices: {self.vertices}")
+        print(f"Edges: {len(self.edges)}")
+        print(f"Edge Density: {self.edge_density()}")
+        print(f"Degree Variance: {self.degree_variance()}")
+        if show_cluster_coef: # takes a while for large graphs
+            print(f"Clustering Coefficient: {self.clustering_coefficient()}")
+
+
 
 def test_increasing_graphs(solvers: list, starting_size, edge_probability):
     # each element in solver_classes should be (algorithm_class, *args, **kwargs)
@@ -314,7 +354,7 @@ def test_increasing_graphs(solvers: list, starting_size, edge_probability):
                 k = solver.get_maximum_clique()
             print(f'Algorithm {solver_class.__name__} took time: {time2 - time1}. Succeeded: {solver.succeeded}')
         n += 1
-    
+
 
 if __name__ == '__main__':
     # graph = Graph.get_graph_from_dataset('p_hat300-3')
