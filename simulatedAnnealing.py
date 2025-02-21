@@ -54,7 +54,7 @@ class Simulated_Annealing_Solver:
             self.improved_score += 1
         self.total_iterations += 1
         
-        if c_delta > 0 or random.random() < math.exp(c_delta / self.T):
+        if c_delta >= 0 or random.random() < math.exp(c_delta / self.T):
             self.permutation[v1], self.permutation[v2] = self.permutation[v2], self.permutation[v1]
             self.running_clique_score -= c_delta
             if self.running_clique_score < self.best_score:
@@ -79,20 +79,49 @@ class Simulated_Annealing_Solver:
     def found_clique(self):
         return self.succeeded
         
+    def get_maximum_clique(self):
+        if self.succeeded:
+            return self.k
+        return 0
 
     def run(self):
         while not self.completed:
             self.update()
-        print(f"Improved score {self.improved_score} / {self.total_iterations}")
+        # print(f"Improved score {self.improved_score} / {self.total_iterations}")
         return f"Succeeded: {self.succeeded}, best score: {self.best_score}"
+    
+
+    def binary_search(graph, T_0, T_f, alpha, k_min = 3, num_attempts = 2, k_max = None):
+        k = k_min
+        while k_min != k_max:
+            if k_max == None:
+                k = k_min * 2
+            else:
+                k = (k_min + k_max + 1) // 2
+            succeeded = False
+            for _ in range(num_attempts):
+                solver = Simulated_Annealing_Solver(graph, k, T_0, T_f, alpha)
+                solver.run()
+                succeeded = solver.succeeded
+                if succeeded:
+                    break
+            if succeeded:
+                k_min = k
+                print(f"Succeeded with k = {k}. New bounds: {k_min}, {k_max}")
+            else:
+                print(f"Failed with k = {k}. New bounds: {k_min}, {k_max}")
+                k_max = k - 1
+            
+        print(f"Final k: {k_min}")
 
 if __name__ == "__main__":
         
-    Graph.test_algorithm(Simulated_Annealing_Solver, 100, 0.001, 0.9998)
-
-    hard_graph = Graph.get_graph_from_dataset('C125.9')
-    solver = Simulated_Annealing_Solver(hard_graph, 16, 100, 0.001, 0.9998) 
-    print(solver.run())
+    # Graph.test_algorithm(Simulated_Annealing_Solver, 100, 0.001, 0.9998)
+    protein_graph = Graph.get_graph_from_dataset('2UV8I_2J6IA_13107')
+    # hard_graph = Graph.get_graph_from_dataset('C125.9')
+    Simulated_Annealing_Solver.binary_search(protein_graph, 100, 0.001, 0.9998, k_min=68, num_attempts=10, k_max=70)
+    # solver = Simulated_Annealing_Solver(protein_graph, 89, 100, 0.001, 0.9998) 
+    # print(solver.run())
     # graph.visualize_algorithm(solver, 0.01, False)
     # for i in range(20):
     #     solver = Simulated_Annealing_Solver(graph, 16, 100, 0.001, 0.9998) 
