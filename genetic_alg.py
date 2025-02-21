@@ -14,6 +14,7 @@ if missing import
 from bitarray import bitarray
 
 class Genetic_Solver:
+    is_decision_problem = False
     def __init__(self, graph: Graph, population_size: int = 500, visualize: bool = False, stagnancy: int = 50, num_cuts_init: int = 10, mutate_prob_init: float = .5):
         self.graph = graph
         self.reordered_vertices = None
@@ -29,6 +30,9 @@ class Genetic_Solver:
         self.stagnant_count = 0
         
         self.setup()
+
+    def get_maximum_clique(self) -> int:
+        return self.best_clique_size
 
     def setup(self):
         self.adj_list = self.graph.get_adj_list()
@@ -46,7 +50,7 @@ class Genetic_Solver:
         
         # ensure is actually clique
         assert self.graph.is_clique(self.best_clique), "Solution found was not clique"
-        
+        self.best_clique_size = self.fitness(self.best_clique)
         return f"Largest clique found was {self.best_clique.to01()} with {self.fitness(self.best_clique)} nodes."
         
 
