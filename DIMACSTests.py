@@ -6,6 +6,11 @@ import bronKerbosch
 import genetic_alg
 
 
+import multiprocessing
+
+seconds_in_hour = 60 * 60
+max_time_allowed = 2 * seconds_in_hour
+
 
 def run_DIMACS_tests(solvers: list, DIMACS_files: list):
     for DIMACS_file in DIMACS_files:
@@ -20,33 +25,70 @@ def run_DIMACS_test(solvers: list, DIMACS_file: str):
     for (solver_class, num_trials, args, kwargs, is_exact) in solvers:
         # print(f'{solver_class.__name__}:')
         tot_time = 0
-        successes = 0
+        cliques_found = []
         max_clique_found = 0
         for _ in range(num_trials):
             if solver_class.is_decision_problem:
                 solver = solver_class(graph, k, *args, **kwargs)
             else:
                 solver = solver_class(graph, *args, **kwargs)
-            time1 = time.time()
-            solver.run()
-            time2 = time.time()
-            tot_time += time2 - time1
-            clique_found = solver.get_maximum_clique()
-            
-            if is_exact:
-                k = clique_found
-            if k == clique_found:
-                successes += 1
 
-            max_clique_found = max(max_clique_found, clique_found)
+
+            # for reasons I don't understand, this threading adds a ton of overhead
+            # since approximation algorithms run quickly anyway, we don't need timeout protection on them
+            # so we can skip the overhead by only threading the exact algorithms
+            if is_exact:
+
+                manager = multiprocessing.Manager()
+                return_dict = manager.dict()
+                thread = multiprocessing.Process(target=run_DIMACS_test_timeout, args=(solver, return_dict))
+                thread.start()
+
+                thread.join(max_time_allowed)
+                if thread.is_alive():
+                    thread.terminate()
+                    thread.join()
+                
+                if 'completed' in return_dict:
+                    clique_found = return_dict['clique_found']
+                    time_taken = return_dict['time_taken']
+                else:
+                    # alg timed out
+                    clique_found = 0
+                    time_taken = max_time_allowed
+            else:
+                return_dict = {}
+                run_DIMACS_test_timeout(solver, return_dict)
+                clique_found = return_dict['clique_found']
+                time_taken = return_dict['time_taken']
+
+            tot_time += time_taken
+            
+            if is_exact or clique_found > k:
+                k = clique_found
+            cliques_found.append(clique_found)
+
             # print(f'Algorithm {solver_class.__name__} took time: {time2 - time1}. Succeeded: {solver.succeeded}')
-        results.append((solver_class.__name__, tot_time / num_trials, max_clique_found, successes / num_trials))
+        results.append((solver_class.__name__, tot_time / num_trials, cliques_found))
         # print(f'Algorithm {solver_class.__name__} took time: {time2 - time1}. Succeeded: {solver.succeeded}')
 
     
     print(f'Graph {DIMACS_file} has size {graph.vertices} and max clique {k}')
-    for alg_name, time_taken, max_clique_found, success_rate in results:
+    for alg_name, time_taken, cliques_found in results:
+        max_clique_found = max(cliques_found)
+        success_rate = cliques_found.count(k) / len(cliques_found)
         print(f"Algorithm {alg_name} took average time: {time_taken:.2} and found a best clique of size {max_clique_found}. Success rate: {success_rate:.0%}")
+    
+
+def run_DIMACS_test_timeout(solver, return_dict):
+    time1 = time.time()
+    solver.run()
+    time2 = time.time()
+    clique_found = solver.get_maximum_clique()
+    return_dict['clique_found'] = clique_found
+    return_dict['time_taken'] = time2 - time1
+    return_dict['completed'] = True
+    return
     
 
 if __name__ == '__main__':
@@ -66,10 +108,12 @@ if __name__ == '__main__':
     DIMACS_files = [
         'c-fat200-1',
         'c-fat500-1',
+        'johnson16-2-4',
         'johnson32-2-4',
         'keller4',
         'keller5',
         'keller6',
+        'hamming10-2',
         'hamming8-2',
         'san200_0.7_1',
         'san400_0.5_1',
@@ -96,7 +140,7 @@ if __name__ == '__main__':
         except:
             print(f'Failed to load graph from {DIMACS_file}')
             raise FileNotFoundError
-    run_DIMACS_tests([bronKerboschClass, branch_and_boundClass, simulatedAnnealingClass, genetic_algClass], DIMACS_files)
+    run_DIMACS_tests([bronKerboschClass, branch_and_boundClass, genetic_algClass, simulatedAnnealingClass], DIMACS_files)
     # test_increasing_graphs([bronKerboschClass, branch_and_boundClass, simulatedAnnealingClass, genetic_algClass], n_0, edge_probability)
 
 
