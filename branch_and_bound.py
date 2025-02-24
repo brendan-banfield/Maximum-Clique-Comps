@@ -41,6 +41,7 @@ class Branch_and_Bound_Solver:
         self.succeeded = False
         self.max_clique = 0
         self.max_clique_vertices = []
+        self.initial_clique = []
 
     def get_maximum_clique(self) -> int:
         if not self.completed:
@@ -224,12 +225,16 @@ def main():
 #        22), (11, 23), (11, 24), (12, 13), (12, 14), (12, 15), (12, 16), (12, 17), (12, 18), (12, 20), (12, 21), (12, 22), (12, 23), (12, 24), (13, 14), (13, 15), (13, 16), (13, 17), (13, 18), (13, 19), (13, 20), (13, 21), (13, 23), (13, 24), (14, 15), (14, 16), (14, 17), (14, 18), (14, 19), (14, 20), (14, 22), (14, 23), (14, 24), (15, 16), (15, 17), (15, 18), (15, 19), (15, 20), (15, 21), (15, 22), (15, 23), (15, 24), (16, 17), (16, 18), (16, 19), (16, 20), (16, 21), (16, 22), (16, 23), (16, 24), (17, 18), (17, 19), (17, 20), (17, 21), (17, 22), (17, 23), (17, 24), (18, 19), (18, 20), (18, 21), (18, 22), (18, 23), (18, 24), (19, 20), (19, 21), (19, 22), (19, 23), (19, 24), (20, 21), (20, 22), (20, 23), (20, 24), (21, 22), (21, 23), (21, 24), (22, 23), (22, 24), (23, 24)])
     
     # Graph.test_algorithm(Branch_and_Bound_Solver)
-    graph = Graph.get_graph_from_dataset('c-fat200-1')
+    graph = Graph.get_graph_from_dataset('p_hat300-1')
     solver = Branch_and_Bound_Solver(graph)
+    import time
+    start_time = time.time()
     solver.run()
+    end_time = time.time()
     print(f"Max clique found is size: {solver.get_maximum_clique()}")
-    clique = solver.max_clique_vertices
-    print(f"Vertices in clique: {clique}")
+    print(f"Time taken: {end_time - start_time} seconds")
+    # clique = solver.max_clique_vertices
+    # print(f"Vertices in clique: {clique}")
     
 # Tells us which vertices in the "max clique" shouldn't be in the max clique
 # I'm keeping it because it may be useful if it breaks again
