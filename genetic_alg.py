@@ -18,6 +18,7 @@ class Genetic_Solver:
     is_decision_problem = False
     def __init__(self, graph: Graph, population_size: int = 500, visualize: bool = False, stagnancy: int = 50, num_cuts_init: int = 10, mutate_prob_init: float = .5):
         self.graph = graph
+        self.N = self.graph.vertices
         self.reordered_vertices = None
         self.population_size = population_size
         self.stagnancy = stagnancy
@@ -40,7 +41,7 @@ class Genetic_Solver:
         self.adj_matrix = self.graph.get_adj_matrix()
         # this isn't actually reordered vertices. It's an array of indices of the vertices in the graph. So the "first vertex" in the 
         # new ordering is the vertex in self.reordered_vertices[0]
-        self.reordered_vertices = sorted(range(self.graph.vertices), key=lambda x: len(self.adj_list[x]), reverse=True)
+        self.reordered_vertices = sorted(range(self.N), key=lambda x: len(self.adj_list[x]), reverse=True)
         self.graph.populate_bitvectors()
 
     def run(self):
@@ -56,7 +57,6 @@ class Genetic_Solver:
         
 
     def update(self):
-        
         # create children from randomly selected parents
         p1,p2 = self.select_parents()
         c1,c2 = self.crossover(p1,p2)
@@ -90,12 +90,12 @@ class Genetic_Solver:
     
     def generate_chromosome(self):
         # create empty subset
-        subset = bitarray([0 for _ in range(self.graph.vertices)])
+        subset = bitarray([0 for _ in range(self.N)])
         # add a random vertex to subset
-        v_0 = random.randint(0, self.graph.vertices - 1)
+        v_0 = random.randint(0, self.N - 1)
         subset[v_0] = 1
         # shuffle list of vertex indices in adjaceny list of v_0
-        nbr_idx_shuffle = self.graph.adj_list[v_0].copy()
+        nbr_idx_shuffle = self.graph.get_adj_list()[v_0].copy()
         random.shuffle(nbr_idx_shuffle)
         
         # check all neighbors to see if they can be added
@@ -159,13 +159,13 @@ class Genetic_Solver:
     def extract_clique(self, subgraph):
         while not self.graph.is_clique(subgraph):
             # find and remove lowest degree vertex
-            lowest_deg = self.graph.vertices
+            lowest_deg = self.N
             lowest_deg_v = 0
-            for v in range(self.graph.vertices):
+            for v in range(self.N):
                 # only consider verts in subgraph
                 if subgraph[v]:
                     # only consider degree w.r.t subgraph
-                    deg = (self.graph.bitvectors[v] & subgraph).count()
+                    deg = (self.graph.get_bitvectors()[v] & subgraph).count()
                     if deg < lowest_deg:
                         lowest_deg = deg
                         lowest_deg_v = v
@@ -173,8 +173,8 @@ class Genetic_Solver:
     
     def improve_clique(self, clique):
         # induces some randomness in selection order
-        i = random.randint(0,self.graph.vertices-1)
-        for v in range(i,self.graph.vertices):
+        i = random.randint(0,self.N-1)
+        for v in range(i,self.N):
             # if vert not in clique and connected to all in clique
             if not clique[v] and self.vert_adjacent_all(v,clique):
                 clique[v] = 1
@@ -210,7 +210,7 @@ class Genetic_Solver:
         return (bit1 ^ bit2).count()
     
     def vert_adjacent_all(self, vert_id, subgraph):
-        adjacent_to = self.graph.bitvectors[vert_id] & subgraph
+        adjacent_to = self.graph.get_bitvectors()[vert_id] & subgraph
         return adjacent_to.count() == subgraph.count()
 
 
