@@ -8,7 +8,7 @@ import random
 v_sizes = [25, 50, 100, 200, 400]
 num_graphs = 100
 
-rand_graph_path = 'datasets/Random Graphs/v'
+rand_graph_path = 'datasets/randomGraphs/v'
 
 if __name__ == '__main__':
     for v_size in v_sizes:
@@ -23,5 +23,6 @@ if __name__ == '__main__':
                 file.write(f"Edge Density: {g.edge_density()}\n")
                 file.write(f"Degree Variance: {g.degree_variance()}\n")
                 file.write(f"Clustering Coefficient: {g.clustering_coefficient()}\n")
+                file.write(f"p edge {g.vertices}\n")
                 file.writelines(edge_strs)
 
