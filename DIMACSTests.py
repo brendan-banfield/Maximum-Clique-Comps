@@ -106,33 +106,42 @@ if __name__ == '__main__':
     n_0 = 120
     edge_probability = 0.99
     DIMACS_files = [
-        'c-fat200-1',
-        'c-fat500-1',
-        'johnson16-2-4',
-        'johnson32-2-4',
-        'keller4',
-        'keller5',
-        'keller6',
-        'hamming10-2',
-        'hamming8-2',
-        'san200_0.7_1',
-        'san400_0.5_1',
-        'san400_0.9_1',
         'sanr200_0.7',
         'sanr400_0.5',
-        'san1000',
         'brock200_1',
-        'brock400_1',
-        'brock800_1',
         'p_hat300-1',
         'p_hat500-1',
         'p_hat700-1',
-        'p_hat1000-1',
-        'p_hat1500-1',
-        'MANN_a27',
-        'MANN_a45'
-
+        'p_hat1500-1'
     ]
+    # files = [
+    #     'c-fat200-1',
+    #     'c-fat500-1',
+    #     'johnson16-2-4',
+    #     'johnson32-2-4',
+    #     'keller4',
+    #     'keller5',
+    #     'keller6',
+    #     'hamming10-2',
+    #     'hamming8-2',
+    #     'san200_0.7_1',
+    #     'san400_0.5_1',
+    #     'san400_0.9_1',
+    #     'sanr200_0.7',
+    #     'sanr400_0.5',
+    #     'san1000',
+    #     'brock200_1',
+    #     'brock400_1',
+    #     'brock800_1',
+    #     'p_hat300-1',
+    #     'p_hat500-1',
+    #     'p_hat700-1',
+    #     'p_hat1000-1',
+    #     'p_hat1500-1',
+    #     'MANN_a27',
+    #     'MANN_a45'
+
+    # ]
     for DIMACS_file in DIMACS_files:
         
         try:
