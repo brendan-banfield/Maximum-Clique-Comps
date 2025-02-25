@@ -8,8 +8,9 @@ import genetic_alg
 
 import multiprocessing
 
-seconds_in_hour = 60 * 60
-max_time_allowed = 2 * seconds_in_hour
+# seconds_in_hour = 60 * 60
+# max_time_allowed = 2 * seconds_in_hour
+max_time_allowed = 600
 
 
 def run_random_tests(solvers: list, random_files: list[str]):
@@ -107,7 +108,7 @@ if __name__ == '__main__':
     edge_probability = 0.99
 
     v_sizes = [25, 50, 100, 200, 400]
-    num_graphs = 5
+    num_graphs = 25
     random_files = []
     for v_size in v_sizes:
         for g_idx in range(num_graphs):
