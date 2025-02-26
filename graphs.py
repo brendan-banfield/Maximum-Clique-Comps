@@ -250,19 +250,12 @@ class Graph:
         return new_graph
     
     def get_graph_from_dataset(dataset_name: str) -> 'Graph':
-        DIMACS_names = [os.path.splitext(name)[0] for name in os.listdir('datasets/DIMACS/')]
-        protein_names = [os.path.splitext(name)[0] for name in os.listdir('datasets/proteinProductGraphs/')]
-        random_names = []
-        for v_size in [25, 50, 100, 200, 400]:
-            for g_idx in range(5):
-                random_names.append('v' + str(v_size) + '/' + str(g_idx))
-
-        if dataset_name in DIMACS_names:
-            return Graph.import_DIMACS_graph(f"DIMACS/{dataset_name}.clq")
-        elif dataset_name in protein_names:
-            return Graph.import_DIMACS_graph(f"proteinProductGraphs/{dataset_name}")
-        elif dataset_name in random_names:
-            return Graph.import_DIMACS_graph(f"randomGraphs/{dataset_name}")
+        if os.path.exists(f'datasets/{dataset_name}.clq'):
+            return Graph.import_DIMACS_graph(f'DIMACS/{dataset_name}.clq')
+        elif os.path.exists(f'datasets/proteinProductGraphs/{dataset_name}'):
+            return Graph.import_DIMACS_graph(f'proteinProductGraphs/{dataset_name}')
+        elif os.path.exists(f'datasets/randomGraphs/{dataset_name}'):
+            return Graph.import_DIMACS_graph(f'randomGraphs/{dataset_name}')
         else:
             raise ValueError(f'Dataset {dataset_name} not found')
         
