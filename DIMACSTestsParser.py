@@ -1,14 +1,14 @@
 import matplotlib.pyplot as plt
 
 
-num_algs = 3
+num_algs = 4
 times = [[] for _ in range(num_algs)]
 successes = [[] for _ in range(num_algs)]
 best_found = [[] for _ in range(num_algs)]
 names = []
 sizes = []
 clique_sizes = []
-with open("increasingGraphsOutput.txt", "r") as f:
+with open("DIMACSTests.txt", "r") as f:
     # format of lines for each test:
     # 'Running tests on {DIMACS_file} with size {graph.vertices}...'
     # 'Graph {DIMACS_file} has size {graph.vertices} and max clique {k}'
@@ -41,14 +41,6 @@ with open("increasingGraphsOutput.txt", "r") as f:
         times[1].append(Branch_and_Bound_time)
         successes[1].append(Branch_and_Bound_success)
 
-        Simulated_Annealing_info = lines[i + 4].split()
-        Simulated_Annealing_time = float(Simulated_Annealing_info[5])
-        Simulated_Annealing_best_found = int(Simulated_Annealing_info[13][:-1])
-        Simulated_Annealing_succeeded = int(Simulated_Annealing_info[16][:-1])
-        times[2].append(Simulated_Annealing_time)
-        successes[2].append(Simulated_Annealing_succeeded)
-        best_found[2].append(Simulated_Annealing_best_found)
-
         Genetic_Alg_info = lines[i + 5].split()
         Genetic_Alg_time = float(Genetic_Alg_info[5])
         Genetic_Alg_best_found = int(Genetic_Alg_info[13][:-1])
@@ -57,6 +49,14 @@ with open("increasingGraphsOutput.txt", "r") as f:
         successes[2].append(Genetic_Alg_succeeded)
         best_found[2].append(Genetic_Alg_best_found)
 
+        Simulated_Annealing_info = lines[i + 4].split()
+        Simulated_Annealing_time = float(Simulated_Annealing_info[5])
+        Simulated_Annealing_best_found = int(Simulated_Annealing_info[13][:-1])
+        Simulated_Annealing_succeeded = int(Simulated_Annealing_info[16][:-1])
+        times[3].append(Simulated_Annealing_time)
+        successes[3].append(Simulated_Annealing_succeeded)
+        best_found[3].append(Simulated_Annealing_best_found)
+
 
         i += 6
 
@@ -64,13 +64,18 @@ with open("increasingGraphsOutput.txt", "r") as f:
 # plt.plot(sizes, clique_sizes, label="Clique Size")
 # plt.show()
 
-cutoff = 80
-plt.plot(sizes[:cutoff], times[0][:cutoff], label="Bron Kerbosch")
-plt.plot(sizes[:cutoff], times[1][:cutoff], label="Branch and Bound")
-plt.plot(sizes[:cutoff], times[2][:cutoff], label="Simulated Annealing")
-plt.plot(sizes[:cutoff], times[3][:cutoff], label="Genetic Algorithm")
+cutoff = len(sizes)
+plt.scatter(sizes[:cutoff], times[0][:cutoff], label="Bron Kerbosch")
+plt.scatter(sizes[:cutoff], times[1][:cutoff], label="Branch and Bound")
+# plt.scatter(sizes[:cutoff], times[2][:cutoff], label="Simulated Annealing")
+# plt.scatter(sizes[:cutoff], times[3][:cutoff], label="Genetic Algorithm")
+plt.legend()
+ax = plt.gca()
+# ax.set_ylim([0, 50])
+# ax.set_xlim([0, 1000])
 plt.show()
 
-plt.plot(sizes, successes[2], label="Simulated Annealing")
-plt.plot(sizes, successes[3], label="Genetic Algorithm")
+plt.scatter(sizes, successes[2], label="Simulated Annealing")
+plt.scatter(sizes, successes[3], label="Genetic Algorithm")
+plt.legend()
 plt.show()

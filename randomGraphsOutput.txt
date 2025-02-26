@@ -1,0 +1,750 @@
+Running tests on v25/0 with size 25...
+Graph v25/0 has size 25 and max clique 5
+Algorithm Pivot_Solver took average time: 0.00023 and found a best clique of size 5. Success rate: 100%
+Algorithm Branch_and_Bound_Solver took average time: 0.00044 and found a best clique of size 5. Success rate: 100%
+Algorithm Genetic_Solver took average time: 0.079 and found a best clique of size 5. Success rate: 100%
+Algorithm Simulated_Annealing_Solver took average time: 0.013 and found a best clique of size 5. Success rate: 100%
+Running tests on v25/1 with size 25...
+Graph v25/1 has size 25 and max clique 3
+Algorithm Pivot_Solver took average time: 6.7e-05 and found a best clique of size 3. Success rate: 100%
+Algorithm Branch_and_Bound_Solver took average time: 0.00023 and found a best clique of size 3. Success rate: 100%
+Algorithm Genetic_Solver took average time: 0.044 and found a best clique of size 3. Success rate: 100%
+Algorithm Simulated_Annealing_Solver took average time: 0.0003 and found a best clique of size 3. Success rate: 100%
+Running tests on v25/2 with size 25...
+Graph v25/2 has size 25 and max clique 5
+Algorithm Pivot_Solver took average time: 0.00011 and found a best clique of size 5. Success rate: 100%
+Algorithm Branch_and_Bound_Solver took average time: 0.00029 and found a best clique of size 5. Success rate: 100%
+Algorithm Genetic_Solver took average time: 0.12 and found a best clique of size 5. Success rate: 100%
+Algorithm Simulated_Annealing_Solver took average time: 0.035 and found a best clique of size 5. Success rate: 100%
+Running tests on v25/3 with size 25...
+Graph v25/3 has size 25 and max clique 5
+Algorithm Pivot_Solver took average time: 0.00011 and found a best clique of size 5. Success rate: 100%
+Algorithm Branch_and_Bound_Solver took average time: 0.00023 and found a best clique of size 5. Success rate: 100%
+Algorithm Genetic_Solver took average time: 0.11 and found a best clique of size 5. Success rate: 100%
+Algorithm Simulated_Annealing_Solver took average time: 0.034 and found a best clique of size 5. Success rate: 100%
+Running tests on v25/4 with size 25...
+Graph v25/4 has size 25 and max clique 5
+Algorithm Pivot_Solver took average time: 0.00019 and found a best clique of size 5. Success rate: 100%
+Algorithm Branch_and_Bound_Solver took average time: 0.00042 and found a best clique of size 5. Success rate: 100%
+Algorithm Genetic_Solver took average time: 0.12 and found a best clique of size 5. Success rate: 100%
+Algorithm Simulated_Annealing_Solver took average time: 0.031 and found a best clique of size 5. Success rate: 100%
+Running tests on v25/5 with size 25...
+Graph v25/5 has size 25 and max clique 7
+Algorithm Pivot_Solver took average time: 0.00035 and found a best clique of size 7. Success rate: 100%
+Algorithm Branch_and_Bound_Solver took average time: 0.0006 and found a best clique of size 7. Success rate: 100%
+Algorithm Genetic_Solver took average time: 0.12 and found a best clique of size 7. Success rate: 100%
+Algorithm Simulated_Annealing_Solver took average time: 0.052 and found a best clique of size 7. Success rate: 100%
+Running tests on v25/6 with size 25...
+Graph v25/6 has size 25 and max clique 4
+Algorithm Pivot_Solver took average time: 8.1e-05 and found a best clique of size 4. Success rate: 100%
+Algorithm Branch_and_Bound_Solver took average time: 0.00017 and found a best clique of size 4. Success rate: 100%
+Algorithm Genetic_Solver took average time: 0.14 and found a best clique of size 4. Success rate: 100%
+Algorithm Simulated_Annealing_Solver took average time: 0.022 and found a best clique of size 4. Success rate: 100%
+Running tests on v25/7 with size 25...
+Graph v25/7 has size 25 and max clique 5
+Algorithm Pivot_Solver took average time: 0.00013 and found a best clique of size 5. Success rate: 100%
+Algorithm Branch_and_Bound_Solver took average time: 0.00034 and found a best clique of size 5. Success rate: 100%
+Algorithm Genetic_Solver took average time: 0.13 and found a best clique of size 5. Success rate: 100%
+Algorithm Simulated_Annealing_Solver took average time: 0.043 and found a best clique of size 5. Success rate: 100%
+Running tests on v25/8 with size 25...
+Graph v25/8 has size 25 and max clique 8
+Algorithm Pivot_Solver took average time: 0.0003 and found a best clique of size 8. Success rate: 100%
+Algorithm Branch_and_Bound_Solver took average time: 0.00055 and found a best clique of size 8. Success rate: 100%
+Algorithm Genetic_Solver took average time: 0.12 and found a best clique of size 8. Success rate: 100%
+Algorithm Simulated_Annealing_Solver took average time: 0.058 and found a best clique of size 8. Success rate: 100%
+Running tests on v25/9 with size 25...
+Graph v25/9 has size 25 and max clique 9
+Algorithm Pivot_Solver took average time: 0.0008 and found a best clique of size 9. Success rate: 100%
+Algorithm Branch_and_Bound_Solver took average time: 0.0011 and found a best clique of size 9. Success rate: 100%
+Algorithm Genetic_Solver took average time: 0.12 and found a best clique of size 9. Success rate: 100%
+Algorithm Simulated_Annealing_Solver took average time: 0.066 and found a best clique of size 9. Success rate: 100%
+Running tests on v25/10 with size 25...
+Graph v25/10 has size 25 and max clique 4
+Algorithm Pivot_Solver took average time: 5.8e-05 and found a best clique of size 4. Success rate: 100%
+Algorithm Branch_and_Bound_Solver took average time: 0.00012 and found a best clique of size 4. Success rate: 100%
+Algorithm Genetic_Solver took average time: 0.11 and found a best clique of size 4. Success rate: 100%
+Algorithm Simulated_Annealing_Solver took average time: 0.021 and found a best clique of size 4. Success rate: 100%
+Running tests on v25/11 with size 25...
+Graph v25/11 has size 25 and max clique 2
+Algorithm Pivot_Solver took average time: 2.6e-05 and found a best clique of size 2. Success rate: 100%
+Algorithm Branch_and_Bound_Solver took average time: 5.9e-05 and found a best clique of size 2. Success rate: 100%
+Algorithm Genetic_Solver took average time: 0.077 and found a best clique of size 2. Success rate: 100%
+Algorithm Simulated_Annealing_Solver took average time: 8.8e-07 and found a best clique of size 2. Success rate: 100%
+Running tests on v25/12 with size 25...
+Graph v25/12 has size 25 and max clique 8
+Algorithm Pivot_Solver took average time: 0.00059 and found a best clique of size 8. Success rate: 100%
+Algorithm Branch_and_Bound_Solver took average time: 0.0013 and found a best clique of size 8. Success rate: 100%
+Algorithm Genetic_Solver took average time: 0.13 and found a best clique of size 8. Success rate: 100%
+Algorithm Simulated_Annealing_Solver took average time: 0.067 and found a best clique of size 8. Success rate: 100%
+Running tests on v25/13 with size 25...
+Graph v25/13 has size 25 and max clique 10
+Algorithm Pivot_Solver took average time: 0.00068 and found a best clique of size 10. Success rate: 100%
+Algorithm Branch_and_Bound_Solver took average time: 0.0011 and found a best clique of size 10. Success rate: 100%
+Algorithm Genetic_Solver took average time: 0.1 and found a best clique of size 10. Success rate: 100%
+Algorithm Simulated_Annealing_Solver took average time: 0.07 and found a best clique of size 10. Success rate: 100%
+Running tests on v25/14 with size 25...
+Graph v25/14 has size 25 and max clique 8
+Algorithm Pivot_Solver took average time: 0.0004 and found a best clique of size 8. Success rate: 100%
+Algorithm Branch_and_Bound_Solver took average time: 0.00098 and found a best clique of size 8. Success rate: 100%
+Algorithm Genetic_Solver took average time: 0.13 and found a best clique of size 8. Success rate: 100%
+Algorithm Simulated_Annealing_Solver took average time: 0.064 and found a best clique of size 8. Success rate: 100%
+Running tests on v25/15 with size 25...
+Graph v25/15 has size 25 and max clique 8
+Algorithm Pivot_Solver took average time: 0.00063 and found a best clique of size 8. Success rate: 100%
+Algorithm Branch_and_Bound_Solver took average time: 0.0017 and found a best clique of size 8. Success rate: 100%
+Algorithm Genetic_Solver took average time: 0.075 and found a best clique of size 8. Success rate: 100%
+Algorithm Simulated_Annealing_Solver took average time: 0.039 and found a best clique of size 8. Success rate: 100%
+Running tests on v25/16 with size 25...
+Graph v25/16 has size 25 and max clique 5
+Algorithm Pivot_Solver took average time: 0.00012 and found a best clique of size 5. Success rate: 100%
+Algorithm Branch_and_Bound_Solver took average time: 0.0003 and found a best clique of size 5. Success rate: 100%
+Algorithm Genetic_Solver took average time: 0.14 and found a best clique of size 5. Success rate: 100%
+Algorithm Simulated_Annealing_Solver took average time: 0.047 and found a best clique of size 5. Success rate: 100%
+Running tests on v25/17 with size 25...
+Graph v25/17 has size 25 and max clique 6
+Algorithm Pivot_Solver took average time: 0.00029 and found a best clique of size 6. Success rate: 100%
+Algorithm Branch_and_Bound_Solver took average time: 0.00029 and found a best clique of size 6. Success rate: 100%
+Algorithm Genetic_Solver took average time: 0.13 and found a best clique of size 6. Success rate: 100%
+Algorithm Simulated_Annealing_Solver took average time: 0.048 and found a best clique of size 6. Success rate: 100%
+Running tests on v25/18 with size 25...
+Graph v25/18 has size 25 and max clique 7
+Algorithm Pivot_Solver took average time: 0.00037 and found a best clique of size 6. Success rate: 0%
+Algorithm Branch_and_Bound_Solver took average time: 0.00053 and found a best clique of size 7. Success rate: 100%
+Algorithm Genetic_Solver took average time: 0.16 and found a best clique of size 7. Success rate: 100%
+Algorithm Simulated_Annealing_Solver took average time: 0.066 and found a best clique of size 7. Success rate: 100%
+Running tests on v25/19 with size 25...
+Graph v25/19 has size 25 and max clique 2
+Algorithm Pivot_Solver took average time: 2.4e-05 and found a best clique of size 2. Success rate: 100%
+Algorithm Branch_and_Bound_Solver took average time: 7.2e-05 and found a best clique of size 2. Success rate: 100%
+Algorithm Genetic_Solver took average time: 0.073 and found a best clique of size 2. Success rate: 100%
+Algorithm Simulated_Annealing_Solver took average time: 1.7e-07 and found a best clique of size 2. Success rate: 100%
+Running tests on v25/20 with size 25...
+Graph v25/20 has size 25 and max clique 13
+Algorithm Pivot_Solver took average time: 0.0015 and found a best clique of size 12. Success rate: 0%
+Algorithm Branch_and_Bound_Solver took average time: 0.0019 and found a best clique of size 13. Success rate: 100%
+Algorithm Genetic_Solver took average time: 0.13 and found a best clique of size 13. Success rate: 100%
+Algorithm Simulated_Annealing_Solver took average time: 0.087 and found a best clique of size 13. Success rate: 100%
+Running tests on v25/21 with size 25...
+Graph v25/21 has size 25 and max clique 11
+Algorithm Pivot_Solver took average time: 0.00083 and found a best clique of size 11. Success rate: 100%
+Algorithm Branch_and_Bound_Solver took average time: 0.00066 and found a best clique of size 11. Success rate: 100%
+Algorithm Genetic_Solver took average time: 0.16 and found a best clique of size 11. Success rate: 100%
+Algorithm Simulated_Annealing_Solver took average time: 0.088 and found a best clique of size 11. Success rate: 100%
+Running tests on v25/22 with size 25...
+Graph v25/22 has size 25 and max clique 3
+Algorithm Pivot_Solver took average time: 5.4e-05 and found a best clique of size 3. Success rate: 100%
+Algorithm Branch_and_Bound_Solver took average time: 0.0001 and found a best clique of size 3. Success rate: 100%
+Algorithm Genetic_Solver took average time: 0.079 and found a best clique of size 3. Success rate: 100%
+Algorithm Simulated_Annealing_Solver took average time: 0.00056 and found a best clique of size 3. Success rate: 100%
+Running tests on v25/23 with size 25...
+Graph v25/23 has size 25 and max clique 7
+Algorithm Pivot_Solver took average time: 0.00062 and found a best clique of size 7. Success rate: 100%
+Algorithm Branch_and_Bound_Solver took average time: 0.0015 and found a best clique of size 7. Success rate: 100%
+Algorithm Genetic_Solver took average time: 0.076 and found a best clique of size 7. Success rate: 100%
+Algorithm Simulated_Annealing_Solver took average time: 0.017 and found a best clique of size 7. Success rate: 100%
+Running tests on v25/24 with size 25...
+Graph v25/24 has size 25 and max clique 12
+Algorithm Pivot_Solver took average time: 0.0012 and found a best clique of size 12. Success rate: 100%
+Algorithm Branch_and_Bound_Solver took average time: 0.0025 and found a best clique of size 12. Success rate: 100%
+Algorithm Genetic_Solver took average time: 0.098 and found a best clique of size 12. Success rate: 100%
+Algorithm Simulated_Annealing_Solver took average time: 0.064 and found a best clique of size 12. Success rate: 100%
+Running tests on v50/0 with size 50...
+Graph v50/0 has size 50 and max clique 4
+Algorithm Pivot_Solver took average time: 0.00022 and found a best clique of size 4. Success rate: 100%
+Algorithm Branch_and_Bound_Solver took average time: 0.00052 and found a best clique of size 4. Success rate: 100%
+Algorithm Genetic_Solver took average time: 0.17 and found a best clique of size 4. Success rate: 100%
+Algorithm Simulated_Annealing_Solver took average time: 0.049 and found a best clique of size 4. Success rate: 100%
+Running tests on v50/1 with size 50...
+Graph v50/1 has size 50 and max clique 9
+Algorithm Pivot_Solver took average time: 0.0056 and found a best clique of size 9. Success rate: 100%
+Algorithm Branch_and_Bound_Solver took average time: 0.0092 and found a best clique of size 9. Success rate: 100%
+Algorithm Genetic_Solver took average time: 0.21 and found a best clique of size 9. Success rate: 100%
+Algorithm Simulated_Annealing_Solver took average time: 0.087 and found a best clique of size 9. Success rate: 100%
+Running tests on v50/2 with size 50...
+Graph v50/2 has size 50 and max clique 4
+Algorithm Pivot_Solver took average time: 0.00028 and found a best clique of size 4. Success rate: 100%
+Algorithm Branch_and_Bound_Solver took average time: 0.00072 and found a best clique of size 4. Success rate: 100%
+Algorithm Genetic_Solver took average time: 0.15 and found a best clique of size 4. Success rate: 100%
+Algorithm Simulated_Annealing_Solver took average time: 0.041 and found a best clique of size 4. Success rate: 100%
+Running tests on v50/3 with size 50...
+Graph v50/3 has size 50 and max clique 9
+Algorithm Pivot_Solver took average time: 0.0063 and found a best clique of size 9. Success rate: 100%
+Algorithm Branch_and_Bound_Solver took average time: 0.0082 and found a best clique of size 9. Success rate: 100%
+Algorithm Genetic_Solver took average time: 0.19 and found a best clique of size 9. Success rate: 100%
+Algorithm Simulated_Annealing_Solver took average time: 0.083 and found a best clique of size 9. Success rate: 100%
+Running tests on v50/4 with size 50...
+Graph v50/4 has size 50 and max clique 15
+Algorithm Pivot_Solver took average time: 0.033 and found a best clique of size 15. Success rate: 100%
+Algorithm Branch_and_Bound_Solver took average time: 0.019 and found a best clique of size 15. Success rate: 100%
+Algorithm Genetic_Solver took average time: 0.19 and found a best clique of size 15. Success rate: 100%
+Algorithm Simulated_Annealing_Solver took average time: 0.11 and found a best clique of size 15. Success rate: 100%
+Running tests on v50/5 with size 50...
+Graph v50/5 has size 50 and max clique 22
+Algorithm Pivot_Solver took average time: 0.24 and found a best clique of size 22. Success rate: 100%
+Algorithm Branch_and_Bound_Solver took average time: 0.046 and found a best clique of size 22. Success rate: 100%
+Algorithm Genetic_Solver took average time: 0.18 and found a best clique of size 22. Success rate: 100%
+Algorithm Simulated_Annealing_Solver took average time: 0.14 and found a best clique of size 22. Success rate: 100%
+Running tests on v50/6 with size 50...
+Graph v50/6 has size 50 and max clique 7
+Algorithm Pivot_Solver took average time: 0.0027 and found a best clique of size 7. Success rate: 100%
+Algorithm Branch_and_Bound_Solver took average time: 0.0076 and found a best clique of size 7. Success rate: 100%
+Algorithm Genetic_Solver took average time: 0.17 and found a best clique of size 7. Success rate: 100%
+Algorithm Simulated_Annealing_Solver took average time: 0.068 and found a best clique of size 7. Success rate: 100%
+Running tests on v50/7 with size 50...
+Graph v50/7 has size 50 and max clique 6
+Algorithm Pivot_Solver took average time: 0.0013 and found a best clique of size 5. Success rate: 0%
+Algorithm Branch_and_Bound_Solver took average time: 0.0046 and found a best clique of size 5. Success rate: 0%
+Algorithm Genetic_Solver took average time: 0.23 and found a best clique of size 6. Success rate: 100%
+Algorithm Simulated_Annealing_Solver took average time: 0.087 and found a best clique of size 6. Success rate: 90%
+Running tests on v50/8 with size 50...
+Graph v50/8 has size 50 and max clique 2
+Algorithm Pivot_Solver took average time: 4.7e-05 and found a best clique of size 2. Success rate: 100%
+Algorithm Branch_and_Bound_Solver took average time: 0.00012 and found a best clique of size 2. Success rate: 100%
+Algorithm Genetic_Solver took average time: 0.073 and found a best clique of size 2. Success rate: 100%
+Algorithm Simulated_Annealing_Solver took average time: 1.9e-07 and found a best clique of size 2. Success rate: 100%
+Running tests on v50/9 with size 50...
+Graph v50/9 has size 50 and max clique 23
+Algorithm Pivot_Solver took average time: 0.12 and found a best clique of size 23. Success rate: 100%
+Algorithm Branch_and_Bound_Solver took average time: 0.02 and found a best clique of size 23. Success rate: 100%
+Algorithm Genetic_Solver took average time: 0.17 and found a best clique of size 23. Success rate: 100%
+Algorithm Simulated_Annealing_Solver took average time: 0.15 and found a best clique of size 23. Success rate: 100%
+Running tests on v50/10 with size 50...
+Graph v50/10 has size 50 and max clique 12
+Algorithm Pivot_Solver took average time: 0.026 and found a best clique of size 12. Success rate: 100%
+Algorithm Branch_and_Bound_Solver took average time: 0.022 and found a best clique of size 12. Success rate: 100%
+Algorithm Genetic_Solver took average time: 0.23 and found a best clique of size 12. Success rate: 100%
+Algorithm Simulated_Annealing_Solver took average time: 0.12 and found a best clique of size 12. Success rate: 80%
+Running tests on v50/11 with size 50...
+Graph v50/11 has size 50 and max clique 8
+Algorithm Pivot_Solver took average time: 0.003 and found a best clique of size 8. Success rate: 100%
+Algorithm Branch_and_Bound_Solver took average time: 0.0062 and found a best clique of size 8. Success rate: 100%
+Algorithm Genetic_Solver took average time: 0.21 and found a best clique of size 8. Success rate: 100%
+Algorithm Simulated_Annealing_Solver took average time: 0.078 and found a best clique of size 8. Success rate: 100%
+Running tests on v50/12 with size 50...
+Graph v50/12 has size 50 and max clique 5
+Algorithm Pivot_Solver took average time: 0.0009 and found a best clique of size 5. Success rate: 100%
+Algorithm Branch_and_Bound_Solver took average time: 0.0027 and found a best clique of size 5. Success rate: 100%
+Algorithm Genetic_Solver took average time: 0.13 and found a best clique of size 5. Success rate: 100%
+Algorithm Simulated_Annealing_Solver took average time: 0.044 and found a best clique of size 5. Success rate: 100%
+Running tests on v50/13 with size 50...
+Graph v50/13 has size 50 and max clique 7
+Algorithm Pivot_Solver took average time: 0.0024 and found a best clique of size 7. Success rate: 100%
+Algorithm Branch_and_Bound_Solver took average time: 0.0064 and found a best clique of size 7. Success rate: 100%
+Algorithm Genetic_Solver took average time: 0.18 and found a best clique of size 7. Success rate: 100%
+Algorithm Simulated_Annealing_Solver took average time: 0.072 and found a best clique of size 7. Success rate: 100%
+Running tests on v50/14 with size 50...
+Graph v50/14 has size 50 and max clique 5
+Algorithm Pivot_Solver took average time: 0.00048 and found a best clique of size 4. Success rate: 0%
+Algorithm Branch_and_Bound_Solver took average time: 0.0019 and found a best clique of size 4. Success rate: 0%
+Algorithm Genetic_Solver took average time: 0.22 and found a best clique of size 5. Success rate: 100%
+Algorithm Simulated_Annealing_Solver took average time: 0.077 and found a best clique of size 5. Success rate: 80%
+Running tests on v50/15 with size 50...
+Graph v50/15 has size 50 and max clique 6
+Algorithm Pivot_Solver took average time: 0.0013 and found a best clique of size 6. Success rate: 100%
+Algorithm Branch_and_Bound_Solver took average time: 0.0026 and found a best clique of size 6. Success rate: 100%
+Algorithm Genetic_Solver took average time: 0.2 and found a best clique of size 6. Success rate: 100%
+Algorithm Simulated_Annealing_Solver took average time: 0.07 and found a best clique of size 6. Success rate: 100%
+Running tests on v50/16 with size 50...
+Graph v50/16 has size 50 and max clique 7
+Algorithm Pivot_Solver took average time: 0.0029 and found a best clique of size 7. Success rate: 100%
+Algorithm Branch_and_Bound_Solver took average time: 0.005 and found a best clique of size 7. Success rate: 100%
+Algorithm Genetic_Solver took average time: 0.2 and found a best clique of size 7. Success rate: 100%
+Algorithm Simulated_Annealing_Solver took average time: 0.075 and found a best clique of size 7. Success rate: 100%
+Running tests on v50/17 with size 50...
+Graph v50/17 has size 50 and max clique 11
+Algorithm Pivot_Solver took average time: 0.015 and found a best clique of size 11. Success rate: 100%
+Algorithm Branch_and_Bound_Solver took average time: 0.015 and found a best clique of size 11. Success rate: 100%
+Algorithm Genetic_Solver took average time: 0.25 and found a best clique of size 11. Success rate: 100%
+Algorithm Simulated_Annealing_Solver took average time: 0.14 and found a best clique of size 11. Success rate: 90%
+Running tests on v50/18 with size 50...
+Graph v50/18 has size 50 and max clique 9
+Algorithm Pivot_Solver took average time: 0.0067 and found a best clique of size 8. Success rate: 0%
+Algorithm Branch_and_Bound_Solver took average time: 0.01 and found a best clique of size 9. Success rate: 100%
+Algorithm Genetic_Solver took average time: 0.27 and found a best clique of size 9. Success rate: 100%
+Algorithm Simulated_Annealing_Solver took average time: 0.13 and found a best clique of size 9. Success rate: 40%
+Running tests on v50/19 with size 50...
+Graph v50/19 has size 50 and max clique 8
+Algorithm Pivot_Solver took average time: 0.0028 and found a best clique of size 8. Success rate: 100%
+Algorithm Branch_and_Bound_Solver took average time: 0.004 and found a best clique of size 8. Success rate: 100%
+Algorithm Genetic_Solver took average time: 0.2 and found a best clique of size 8. Success rate: 100%
+Algorithm Simulated_Annealing_Solver took average time: 0.1 and found a best clique of size 8. Success rate: 70%
+Running tests on v50/20 with size 50...
+Graph v50/20 has size 50 and max clique 44
+Algorithm Pivot_Solver took average time: 0.00078 and found a best clique of size 44. Success rate: 100%
+Algorithm Branch_and_Bound_Solver took average time: 0.023 and found a best clique of size 44. Success rate: 100%
+Algorithm Genetic_Solver took average time: 0.12 and found a best clique of size 44. Success rate: 100%
+Algorithm Simulated_Annealing_Solver took average time: 0.22 and found a best clique of size 44. Success rate: 100%
+Running tests on v50/21 with size 50...
+Graph v50/21 has size 50 and max clique 12
+Algorithm Pivot_Solver took average time: 0.024 and found a best clique of size 12. Success rate: 100%
+Algorithm Branch_and_Bound_Solver took average time: 0.032 and found a best clique of size 12. Success rate: 100%
+Algorithm Genetic_Solver took average time: 0.21 and found a best clique of size 12. Success rate: 100%
+Algorithm Simulated_Annealing_Solver took average time: 0.098 and found a best clique of size 12. Success rate: 100%
+Running tests on v50/22 with size 50...
+Graph v50/22 has size 50 and max clique 7
+Algorithm Pivot_Solver took average time: 0.0016 and found a best clique of size 7. Success rate: 100%
+Algorithm Branch_and_Bound_Solver took average time: 0.0025 and found a best clique of size 7. Success rate: 100%
+Algorithm Genetic_Solver took average time: 0.22 and found a best clique of size 7. Success rate: 100%
+Algorithm Simulated_Annealing_Solver took average time: 0.11 and found a best clique of size 7. Success rate: 50%
+Running tests on v50/23 with size 50...
+Graph v50/23 has size 50 and max clique 6
+Algorithm Pivot_Solver took average time: 0.00092 and found a best clique of size 6. Success rate: 100%
+Algorithm Branch_and_Bound_Solver took average time: 0.0021 and found a best clique of size 6. Success rate: 100%
+Algorithm Genetic_Solver took average time: 0.15 and found a best clique of size 6. Success rate: 100%
+Algorithm Simulated_Annealing_Solver took average time: 0.065 and found a best clique of size 6. Success rate: 100%
+Running tests on v50/24 with size 50...
+Graph v50/24 has size 50 and max clique 6
+Algorithm Pivot_Solver took average time: 0.0012 and found a best clique of size 5. Success rate: 0%
+Algorithm Branch_and_Bound_Solver took average time: 0.003 and found a best clique of size 6. Success rate: 100%
+Algorithm Genetic_Solver took average time: 0.19 and found a best clique of size 6. Success rate: 100%
+Algorithm Simulated_Annealing_Solver took average time: 0.084 and found a best clique of size 6. Success rate: 90%
+Running tests on v100/0 with size 100...
+Graph v100/0 has size 100 and max clique 10
+Algorithm Pivot_Solver took average time: 0.046 and found a best clique of size 10. Success rate: 100%
+Algorithm Branch_and_Bound_Solver took average time: 0.071 and found a best clique of size 10. Success rate: 100%
+Algorithm Genetic_Solver took average time: 0.34 and found a best clique of size 10. Success rate: 100%
+Algorithm Simulated_Annealing_Solver took average time: 0.13 and found a best clique of size 10. Success rate: 60%
+Running tests on v100/1 with size 100...
+Graph v100/1 has size 100 and max clique 3
+Algorithm Pivot_Solver took average time: 0.00019 and found a best clique of size 3. Success rate: 100%
+Algorithm Branch_and_Bound_Solver took average time: 0.00051 and found a best clique of size 3. Success rate: 100%
+Algorithm Genetic_Solver took average time: 0.18 and found a best clique of size 3. Success rate: 100%
+Algorithm Simulated_Annealing_Solver took average time: 0.036 and found a best clique of size 3. Success rate: 100%
+Running tests on v100/2 with size 100...
+Graph v100/2 has size 100 and max clique 57
+Algorithm Pivot_Solver took average time: 6e+02 and found a best clique of size 0. Success rate: 0%
+Algorithm Branch_and_Bound_Solver took average time: 3.2 and found a best clique of size 57. Success rate: 100%
+Algorithm Genetic_Solver took average time: 0.43 and found a best clique of size 57. Success rate: 100%
+Algorithm Simulated_Annealing_Solver took average time: 0.35 and found a best clique of size 57. Success rate: 100%
+Running tests on v100/3 with size 100...
+Graph v100/3 has size 100 and max clique 5
+Algorithm Pivot_Solver took average time: 0.0017 and found a best clique of size 5. Success rate: 100%
+Algorithm Branch_and_Bound_Solver took average time: 0.009 and found a best clique of size 5. Success rate: 100%
+Algorithm Genetic_Solver took average time: 0.26 and found a best clique of size 5. Success rate: 100%
+Algorithm Simulated_Annealing_Solver took average time: 0.085 and found a best clique of size 5. Success rate: 90%
+Running tests on v100/4 with size 100...
+Graph v100/4 has size 100 and max clique 20
+Algorithm Pivot_Solver took average time: 2.7e+01 and found a best clique of size 20. Success rate: 100%
+Algorithm Branch_and_Bound_Solver took average time: 1.3e+01 and found a best clique of size 20. Success rate: 100%
+Algorithm Genetic_Solver took average time: 0.46 and found a best clique of size 20. Success rate: 100%
+Algorithm Simulated_Annealing_Solver took average time: 0.19 and found a best clique of size 20. Success rate: 60%
+Running tests on v100/5 with size 100...
+Graph v100/5 has size 100 and max clique 32
+Algorithm Pivot_Solver took average time: 6e+02 and found a best clique of size 0. Success rate: 0%
+Algorithm Branch_and_Bound_Solver took average time: 4.6e+02 and found a best clique of size 32. Success rate: 100%
+Algorithm Genetic_Solver took average time: 0.46 and found a best clique of size 32. Success rate: 100%
+Algorithm Simulated_Annealing_Solver took average time: 0.24 and found a best clique of size 32. Success rate: 80%
+Running tests on v100/6 with size 100...
+Graph v100/6 has size 100 and max clique 20
+Algorithm Pivot_Solver took average time: 3.2e+01 and found a best clique of size 20. Success rate: 100%
+Algorithm Branch_and_Bound_Solver took average time: 1.1e+01 and found a best clique of size 20. Success rate: 100%
+Algorithm Genetic_Solver took average time: 0.45 and found a best clique of size 20. Success rate: 100%
+Algorithm Simulated_Annealing_Solver took average time: 0.19 and found a best clique of size 20. Success rate: 70%
+Running tests on v100/7 with size 100...
+Graph v100/7 has size 100 and max clique 7
+Algorithm Pivot_Solver took average time: 0.011 and found a best clique of size 7. Success rate: 100%
+Algorithm Branch_and_Bound_Solver took average time: 0.031 and found a best clique of size 7. Success rate: 100%
+Algorithm Genetic_Solver took average time: 0.28 and found a best clique of size 7. Success rate: 100%
+Algorithm Simulated_Annealing_Solver took average time: 0.098 and found a best clique of size 7. Success rate: 70%
+Running tests on v100/8 with size 100...
+Graph v100/8 has size 100 and max clique 14
+Algorithm Pivot_Solver took average time: 1.2 and found a best clique of size 14. Success rate: 100%
+Algorithm Branch_and_Bound_Solver took average time: 0.91 and found a best clique of size 14. Success rate: 100%
+Algorithm Genetic_Solver took average time: 0.4 and found a best clique of size 14. Success rate: 90%
+Algorithm Simulated_Annealing_Solver took average time: 0.16 and found a best clique of size 14. Success rate: 70%
+Running tests on v100/9 with size 100...
+Graph v100/9 has size 100 and max clique 4
+Algorithm Pivot_Solver took average time: 0.0016 and found a best clique of size 4. Success rate: 100%
+Algorithm Branch_and_Bound_Solver took average time: 0.011 and found a best clique of size 4. Success rate: 100%
+Algorithm Genetic_Solver took average time: 0.11 and found a best clique of size 4. Success rate: 100%
+Algorithm Simulated_Annealing_Solver took average time: 0.037 and found a best clique of size 4. Success rate: 100%
+Running tests on v100/10 with size 100...
+Graph v100/10 has size 100 and max clique 18
+Algorithm Pivot_Solver took average time: 8.7 and found a best clique of size 18. Success rate: 100%
+Algorithm Branch_and_Bound_Solver took average time: 3.9 and found a best clique of size 18. Success rate: 100%
+Algorithm Genetic_Solver took average time: 0.43 and found a best clique of size 18. Success rate: 100%
+Algorithm Simulated_Annealing_Solver took average time: 0.23 and found a best clique of size 18. Success rate: 10%
+Running tests on v100/11 with size 100...
+Graph v100/11 has size 100 and max clique 21
+Algorithm Pivot_Solver took average time: 2e+01 and found a best clique of size 21. Success rate: 100%
+Algorithm Branch_and_Bound_Solver took average time: 4.5 and found a best clique of size 21. Success rate: 100%
+Algorithm Genetic_Solver took average time: 0.5 and found a best clique of size 21. Success rate: 100%
+Algorithm Simulated_Annealing_Solver took average time: 0.25 and found a best clique of size 21. Success rate: 30%
+Running tests on v100/12 with size 100...
+Graph v100/12 has size 100 and max clique 4
+Algorithm Pivot_Solver took average time: 0.00056 and found a best clique of size 4. Success rate: 100%
+Algorithm Branch_and_Bound_Solver took average time: 0.0029 and found a best clique of size 4. Success rate: 100%
+Algorithm Genetic_Solver took average time: 0.22 and found a best clique of size 4. Success rate: 100%
+Algorithm Simulated_Annealing_Solver took average time: 0.059 and found a best clique of size 4. Success rate: 100%
+Running tests on v100/13 with size 100...
+Graph v100/13 has size 100 and max clique 8
+Algorithm Pivot_Solver took average time: 0.03 and found a best clique of size 8. Success rate: 100%
+Algorithm Branch_and_Bound_Solver took average time: 0.078 and found a best clique of size 8. Success rate: 100%
+Algorithm Genetic_Solver took average time: 0.23 and found a best clique of size 8. Success rate: 100%
+Algorithm Simulated_Annealing_Solver took average time: 0.082 and found a best clique of size 8. Success rate: 100%
+Running tests on v100/14 with size 100...
+Graph v100/14 has size 100 and max clique 46
+Algorithm Pivot_Solver took average time: 6e+02 and found a best clique of size 0. Success rate: 0%
+Algorithm Branch_and_Bound_Solver took average time: 6e+02 and found a best clique of size 0. Success rate: 0%
+Algorithm Genetic_Solver took average time: 0.37 and found a best clique of size 46. Success rate: 100%
+Algorithm Simulated_Annealing_Solver took average time: 0.32 and found a best clique of size 46. Success rate: 90%
+Running tests on v100/15 with size 100...
+Graph v100/15 has size 100 and max clique 45
+Algorithm Pivot_Solver took average time: 6e+02 and found a best clique of size 0. Success rate: 0%
+Algorithm Branch_and_Bound_Solver took average time: 2.5e+01 and found a best clique of size 45. Success rate: 100%
+Algorithm Genetic_Solver took average time: 0.37 and found a best clique of size 45. Success rate: 100%
+Algorithm Simulated_Annealing_Solver took average time: 0.32 and found a best clique of size 45. Success rate: 100%
+Running tests on v100/16 with size 100...
+Graph v100/16 has size 100 and max clique 11
+Algorithm Pivot_Solver took average time: 0.17 and found a best clique of size 11. Success rate: 100%
+Algorithm Branch_and_Bound_Solver took average time: 0.24 and found a best clique of size 11. Success rate: 100%
+Algorithm Genetic_Solver took average time: 0.31 and found a best clique of size 11. Success rate: 90%
+Algorithm Simulated_Annealing_Solver took average time: 0.17 and found a best clique of size 11. Success rate: 30%
+Running tests on v100/17 with size 100...
+Graph v100/17 has size 100 and max clique 14
+Algorithm Pivot_Solver took average time: 1.4 and found a best clique of size 14. Success rate: 100%
+Algorithm Branch_and_Bound_Solver took average time: 1.1 and found a best clique of size 14. Success rate: 100%
+Algorithm Genetic_Solver took average time: 0.4 and found a best clique of size 14. Success rate: 100%
+Algorithm Simulated_Annealing_Solver took average time: 0.14 and found a best clique of size 14. Success rate: 90%
+Running tests on v100/18 with size 100...
+Graph v100/18 has size 100 and max clique 2
+Algorithm Pivot_Solver took average time: 0.00013 and found a best clique of size 2. Success rate: 100%
+Algorithm Branch_and_Bound_Solver took average time: 0.0011 and found a best clique of size 2. Success rate: 100%
+Algorithm Genetic_Solver took average time: 0.049 and found a best clique of size 2. Success rate: 100%
+Algorithm Simulated_Annealing_Solver took average time: 4.1e-07 and found a best clique of size 2. Success rate: 100%
+Running tests on v100/19 with size 100...
+Graph v100/19 has size 100 and max clique 18
+Algorithm Pivot_Solver took average time: 9.6 and found a best clique of size 18. Success rate: 100%
+Algorithm Branch_and_Bound_Solver took average time: 5.6 and found a best clique of size 17. Success rate: 0%
+Algorithm Genetic_Solver took average time: 0.49 and found a best clique of size 18. Success rate: 80%
+Algorithm Simulated_Annealing_Solver took average time: 0.23 and found a best clique of size 18. Success rate: 20%
+Running tests on v100/20 with size 100...
+Graph v100/20 has size 100 and max clique 8
+Algorithm Pivot_Solver took average time: 0.0089 and found a best clique of size 8. Success rate: 100%
+Algorithm Branch_and_Bound_Solver took average time: 0.025 and found a best clique of size 8. Success rate: 100%
+Algorithm Genetic_Solver took average time: 0.29 and found a best clique of size 8. Success rate: 100%
+Algorithm Simulated_Annealing_Solver took average time: 0.12 and found a best clique of size 8. Success rate: 50%
+Running tests on v100/21 with size 100...
+Graph v100/21 has size 100 and max clique 7
+Algorithm Pivot_Solver took average time: 0.011 and found a best clique of size 7. Success rate: 100%
+Algorithm Branch_and_Bound_Solver took average time: 0.038 and found a best clique of size 7. Success rate: 100%
+Algorithm Genetic_Solver took average time: 0.29 and found a best clique of size 7. Success rate: 100%
+Algorithm Simulated_Annealing_Solver took average time: 0.13 and found a best clique of size 7. Success rate: 40%
+Running tests on v100/22 with size 100...
+Graph v100/22 has size 100 and max clique 7
+Algorithm Pivot_Solver took average time: 0.015 and found a best clique of size 7. Success rate: 100%
+Algorithm Branch_and_Bound_Solver took average time: 0.047 and found a best clique of size 7. Success rate: 100%
+Algorithm Genetic_Solver took average time: 0.28 and found a best clique of size 7. Success rate: 100%
+Algorithm Simulated_Annealing_Solver took average time: 0.093 and found a best clique of size 7. Success rate: 90%
+Running tests on v100/23 with size 100...
+Graph v100/23 has size 100 and max clique 7
+Algorithm Pivot_Solver took average time: 0.017 and found a best clique of size 7. Success rate: 100%
+Algorithm Branch_and_Bound_Solver took average time: 0.055 and found a best clique of size 7. Success rate: 100%
+Algorithm Genetic_Solver took average time: 0.21 and found a best clique of size 7. Success rate: 100%
+Algorithm Simulated_Annealing_Solver took average time: 0.079 and found a best clique of size 7. Success rate: 100%
+Running tests on v100/24 with size 100...
+Graph v100/24 has size 100 and max clique 14
+Algorithm Pivot_Solver took average time: 1.6 and found a best clique of size 14. Success rate: 100%
+Algorithm Branch_and_Bound_Solver took average time: 1.3 and found a best clique of size 14. Success rate: 100%
+Algorithm Genetic_Solver took average time: 0.41 and found a best clique of size 14. Success rate: 100%
+Algorithm Simulated_Annealing_Solver took average time: 0.18 and found a best clique of size 14. Success rate: 50%
+Running tests on v200/0 with size 200...
+Graph v200/0 has size 200 and max clique 34
+Algorithm Pivot_Solver took average time: 6e+02 and found a best clique of size 0. Success rate: 0%
+Algorithm Branch_and_Bound_Solver took average time: 6e+02 and found a best clique of size 0. Success rate: 0%
+Algorithm Genetic_Solver took average time: 1.1 and found a best clique of size 34. Success rate: 60%
+Algorithm Simulated_Annealing_Solver took average time: 0.37 and found a best clique of size 34. Success rate: 10%
+Running tests on v200/1 with size 200...
+Graph v200/1 has size 200 and max clique 3
+Algorithm Pivot_Solver took average time: 0.00072 and found a best clique of size 3. Success rate: 100%
+Algorithm Branch_and_Bound_Solver took average time: 0.012 and found a best clique of size 3. Success rate: 100%
+Algorithm Genetic_Solver took average time: 0.18 and found a best clique of size 3. Success rate: 100%
+Algorithm Simulated_Annealing_Solver took average time: 0.037 and found a best clique of size 3. Success rate: 100%
+Running tests on v200/2 with size 200...
+Graph v200/2 has size 200 and max clique 6
+Algorithm Pivot_Solver took average time: 0.0088 and found a best clique of size 6. Success rate: 100%
+Algorithm Branch_and_Bound_Solver took average time: 0.08 and found a best clique of size 6. Success rate: 100%
+Algorithm Genetic_Solver took average time: 0.33 and found a best clique of size 6. Success rate: 70%
+Algorithm Simulated_Annealing_Solver took average time: 0.13 and found a best clique of size 6. Success rate: 10%
+Running tests on v200/3 with size 200...
+Graph v200/3 has size 200 and max clique 17
+Algorithm Pivot_Solver took average time: 2.2e+02 and found a best clique of size 17. Success rate: 100%
+Algorithm Branch_and_Bound_Solver took average time: 1.4e+02 and found a best clique of size 17. Success rate: 100%
+Algorithm Genetic_Solver took average time: 0.63 and found a best clique of size 17. Success rate: 10%
+Algorithm Simulated_Annealing_Solver took average time: 0.24 and found a best clique of size 0. Success rate: 0%
+Running tests on v200/4 with size 200...
+Graph v200/4 has size 200 and max clique 11
+Algorithm Pivot_Solver took average time: 1.5 and found a best clique of size 11. Success rate: 100%
+Algorithm Branch_and_Bound_Solver took average time: 2.3 and found a best clique of size 11. Success rate: 100%
+Algorithm Genetic_Solver took average time: 0.52 and found a best clique of size 11. Success rate: 50%
+Algorithm Simulated_Annealing_Solver took average time: 0.18 and found a best clique of size 0. Success rate: 0%
+Running tests on v200/5 with size 200...
+Graph v200/5 has size 200 and max clique 7
+Algorithm Pivot_Solver took average time: 0.052 and found a best clique of size 7. Success rate: 100%
+Algorithm Branch_and_Bound_Solver took average time: 0.27 and found a best clique of size 7. Success rate: 100%
+Algorithm Genetic_Solver took average time: 0.38 and found a best clique of size 7. Success rate: 90%
+Algorithm Simulated_Annealing_Solver took average time: 0.12 and found a best clique of size 7. Success rate: 40%
+Running tests on v200/6 with size 200...
+Graph v200/6 has size 200 and max clique 5
+Algorithm Pivot_Solver took average time: 0.0045 and found a best clique of size 5. Success rate: 100%
+Algorithm Branch_and_Bound_Solver took average time: 0.053 and found a best clique of size 5. Success rate: 100%
+Algorithm Genetic_Solver took average time: 0.3 and found a best clique of size 5. Success rate: 90%
+Algorithm Simulated_Annealing_Solver took average time: 0.13 and found a best clique of size 0. Success rate: 0%
+Running tests on v200/7 with size 200...
+Graph v200/7 has size 200 and max clique 13
+Algorithm Pivot_Solver took average time: 1.2e+01 and found a best clique of size 13. Success rate: 100%
+Algorithm Branch_and_Bound_Solver took average time: 1.3e+01 and found a best clique of size 13. Success rate: 100%
+Algorithm Genetic_Solver took average time: 0.54 and found a best clique of size 13. Success rate: 70%
+Algorithm Simulated_Annealing_Solver took average time: 0.2 and found a best clique of size 0. Success rate: 0%
+Running tests on v200/8 with size 200...
+Graph v200/8 has size 200 and max clique 4
+Algorithm Pivot_Solver took average time: 0.0018 and found a best clique of size 4. Success rate: 100%
+Algorithm Branch_and_Bound_Solver took average time: 0.026 and found a best clique of size 4. Success rate: 100%
+Algorithm Genetic_Solver took average time: 0.3 and found a best clique of size 4. Success rate: 100%
+Algorithm Simulated_Annealing_Solver took average time: 0.11 and found a best clique of size 4. Success rate: 30%
+Running tests on v200/9 with size 200...
+Graph v200/9 has size 200 and max clique 8
+Algorithm Pivot_Solver took average time: 0.16 and found a best clique of size 8. Success rate: 100%
+Algorithm Branch_and_Bound_Solver took average time: 0.58 and found a best clique of size 8. Success rate: 100%
+Algorithm Genetic_Solver took average time: 0.44 and found a best clique of size 8. Success rate: 100%
+Algorithm Simulated_Annealing_Solver took average time: 0.11 and found a best clique of size 8. Success rate: 70%
+Running tests on v200/10 with size 200...
+Graph v200/10 has size 200 and max clique 9
+Algorithm Pivot_Solver took average time: 0.63 and found a best clique of size 9. Success rate: 100%
+Algorithm Branch_and_Bound_Solver took average time: 1.7 and found a best clique of size 9. Success rate: 100%
+Algorithm Genetic_Solver took average time: 0.42 and found a best clique of size 9. Success rate: 100%
+Algorithm Simulated_Annealing_Solver took average time: 0.12 and found a best clique of size 9. Success rate: 70%
+Running tests on v200/11 with size 200...
+Graph v200/11 has size 200 and max clique 9
+Algorithm Pivot_Solver took average time: 0.24 and found a best clique of size 9. Success rate: 100%
+Algorithm Branch_and_Bound_Solver took average time: 0.72 and found a best clique of size 9. Success rate: 100%
+Algorithm Genetic_Solver took average time: 0.44 and found a best clique of size 9. Success rate: 60%
+Algorithm Simulated_Annealing_Solver took average time: 0.17 and found a best clique of size 0. Success rate: 0%
+Running tests on v200/12 with size 200...
+Graph v200/12 has size 200 and max clique 4
+Algorithm Pivot_Solver took average time: 0.0028 and found a best clique of size 4. Success rate: 100%
+Algorithm Branch_and_Bound_Solver took average time: 0.041 and found a best clique of size 4. Success rate: 100%
+Algorithm Genetic_Solver took average time: 0.25 and found a best clique of size 4. Success rate: 100%
+Algorithm Simulated_Annealing_Solver took average time: 0.079 and found a best clique of size 4. Success rate: 90%
+Running tests on v200/13 with size 200...
+Graph v200/13 has size 200 and max clique 12
+Algorithm Pivot_Solver took average time: 2.9 and found a best clique of size 12. Success rate: 100%
+Algorithm Branch_and_Bound_Solver took average time: 3.6 and found a best clique of size 12. Success rate: 100%
+Algorithm Genetic_Solver took average time: 0.48 and found a best clique of size 12. Success rate: 20%
+Algorithm Simulated_Annealing_Solver took average time: 0.19 and found a best clique of size 0. Success rate: 0%
+Running tests on v200/14 with size 200...
+Graph v200/14 has size 200 and max clique 25
+Algorithm Pivot_Solver took average time: 6e+02 and found a best clique of size 0. Success rate: 0%
+Algorithm Branch_and_Bound_Solver took average time: 6e+02 and found a best clique of size 0. Success rate: 0%
+Algorithm Genetic_Solver took average time: 0.84 and found a best clique of size 25. Success rate: 40%
+Algorithm Simulated_Annealing_Solver took average time: 0.28 and found a best clique of size 25. Success rate: 20%
+Running tests on v200/15 with size 200...
+Graph v200/15 has size 200 and max clique 6
+Algorithm Pivot_Solver took average time: 0.039 and found a best clique of size 6. Success rate: 100%
+Algorithm Branch_and_Bound_Solver took average time: 0.24 and found a best clique of size 6. Success rate: 100%
+Algorithm Genetic_Solver took average time: 0.29 and found a best clique of size 6. Success rate: 100%
+Algorithm Simulated_Annealing_Solver took average time: 0.087 and found a best clique of size 6. Success rate: 80%
+Running tests on v200/16 with size 200...
+Graph v200/16 has size 200 and max clique 45
+Algorithm Pivot_Solver took average time: 6e+02 and found a best clique of size 0. Success rate: 0%
+Algorithm Branch_and_Bound_Solver took average time: 6e+02 and found a best clique of size 0. Success rate: 0%
+Algorithm Genetic_Solver took average time: 1.3 and found a best clique of size 45. Success rate: 50%
+Algorithm Simulated_Annealing_Solver took average time: 0.46 and found a best clique of size 45. Success rate: 10%
+Running tests on v200/17 with size 200...
+Graph v200/17 has size 200 and max clique 9
+Algorithm Pivot_Solver took average time: 0.36 and found a best clique of size 9. Success rate: 100%
+Algorithm Branch_and_Bound_Solver took average time: 1.0 and found a best clique of size 9. Success rate: 100%
+Algorithm Genetic_Solver took average time: 0.47 and found a best clique of size 9. Success rate: 100%
+Algorithm Simulated_Annealing_Solver took average time: 0.14 and found a best clique of size 9. Success rate: 40%
+Running tests on v200/18 with size 200...
+Graph v200/18 has size 200 and max clique 5
+Algorithm Pivot_Solver took average time: 0.0033 and found a best clique of size 4. Success rate: 0%
+Algorithm Branch_and_Bound_Solver took average time: 0.049 and found a best clique of size 4. Success rate: 0%
+Algorithm Genetic_Solver took average time: 0.37 and found a best clique of size 5. Success rate: 90%
+Algorithm Simulated_Annealing_Solver took average time: 0.12 and found a best clique of size 5. Success rate: 10%
+Running tests on v200/19 with size 200...
+Graph v200/19 has size 200 and max clique 53
+Algorithm Pivot_Solver took average time: 6e+02 and found a best clique of size 0. Success rate: 0%
+Algorithm Branch_and_Bound_Solver took average time: 6e+02 and found a best clique of size 0. Success rate: 0%
+Algorithm Genetic_Solver took average time: 1.2 and found a best clique of size 53. Success rate: 10%
+Algorithm Simulated_Annealing_Solver took average time: 0.53 and found a best clique of size 0. Success rate: 0%
+Running tests on v200/20 with size 200...
+Graph v200/20 has size 200 and max clique 7
+Algorithm Pivot_Solver took average time: 0.06 and found a best clique of size 7. Success rate: 100%
+Algorithm Branch_and_Bound_Solver took average time: 0.3 and found a best clique of size 7. Success rate: 100%
+Algorithm Genetic_Solver took average time: 0.46 and found a best clique of size 7. Success rate: 100%
+Algorithm Simulated_Annealing_Solver took average time: 0.14 and found a best clique of size 7. Success rate: 10%
+Running tests on v200/21 with size 200...
+Graph v200/21 has size 200 and max clique 9
+Algorithm Pivot_Solver took average time: 0.26 and found a best clique of size 9. Success rate: 100%
+Algorithm Branch_and_Bound_Solver took average time: 0.72 and found a best clique of size 9. Success rate: 100%
+Algorithm Genetic_Solver took average time: 0.4 and found a best clique of size 9. Success rate: 40%
+Algorithm Simulated_Annealing_Solver took average time: 0.16 and found a best clique of size 9. Success rate: 10%
+Running tests on v200/22 with size 200...
+Graph v200/22 has size 200 and max clique 10
+Algorithm Pivot_Solver took average time: 0.76 and found a best clique of size 10. Success rate: 100%
+Algorithm Branch_and_Bound_Solver took average time: 1.5 and found a best clique of size 10. Success rate: 100%
+Algorithm Genetic_Solver took average time: 0.45 and found a best clique of size 10. Success rate: 40%
+Algorithm Simulated_Annealing_Solver took average time: 0.17 and found a best clique of size 10. Success rate: 10%
+Running tests on v200/23 with size 200...
+Graph v200/23 has size 200 and max clique 17
+Algorithm Pivot_Solver took average time: 2.6e+02 and found a best clique of size 17. Success rate: 100%
+Algorithm Branch_and_Bound_Solver took average time: 1.7e+02 and found a best clique of size 17. Success rate: 100%
+Algorithm Genetic_Solver took average time: 0.66 and found a best clique of size 17. Success rate: 30%
+Algorithm Simulated_Annealing_Solver took average time: 0.24 and found a best clique of size 0. Success rate: 0%
+Running tests on v200/24 with size 200...
+Graph v200/24 has size 200 and max clique 6
+Algorithm Pivot_Solver took average time: 0.031 and found a best clique of size 6. Success rate: 100%
+Algorithm Branch_and_Bound_Solver took average time: 0.21 and found a best clique of size 6. Success rate: 100%
+Algorithm Genetic_Solver took average time: 0.32 and found a best clique of size 6. Success rate: 100%
+Algorithm Simulated_Annealing_Solver took average time: 0.096 and found a best clique of size 6. Success rate: 80%
+Running tests on v400/0 with size 400...
+Graph v400/0 has size 400 and max clique 57
+Algorithm Pivot_Solver took average time: 6e+02 and found a best clique of size 0. Success rate: 0%
+Algorithm Branch_and_Bound_Solver took average time: 6e+02 and found a best clique of size 0. Success rate: 0%
+Algorithm Genetic_Solver took average time: 2.5 and found a best clique of size 57. Success rate: 10%
+Algorithm Simulated_Annealing_Solver took average time: 0.57 and found a best clique of size 0. Success rate: 0%
+Running tests on v400/1 with size 400...
+Graph v400/1 has size 400 and max clique 19
+Algorithm Pivot_Solver took average time: 6e+02 and found a best clique of size 0. Success rate: 0%
+Algorithm Branch_and_Bound_Solver took average time: 6e+02 and found a best clique of size 0. Success rate: 0%
+Algorithm Genetic_Solver took average time: 1.0 and found a best clique of size 19. Success rate: 20%
+Algorithm Simulated_Annealing_Solver took average time: 0.26 and found a best clique of size 0. Success rate: 0%
+Running tests on v400/2 with size 400...
+Graph v400/2 has size 400 and max clique 22
+Algorithm Pivot_Solver took average time: 6e+02 and found a best clique of size 0. Success rate: 0%
+Algorithm Branch_and_Bound_Solver took average time: 6e+02 and found a best clique of size 0. Success rate: 0%
+Algorithm Genetic_Solver took average time: 1.3 and found a best clique of size 22. Success rate: 20%
+Algorithm Simulated_Annealing_Solver took average time: 0.28 and found a best clique of size 22. Success rate: 10%
+Running tests on v400/3 with size 400...
+Graph v400/3 has size 400 and max clique 32
+Algorithm Pivot_Solver took average time: 6e+02 and found a best clique of size 0. Success rate: 0%
+Algorithm Branch_and_Bound_Solver took average time: 6e+02 and found a best clique of size 0. Success rate: 0%
+Algorithm Genetic_Solver took average time: 1.6 and found a best clique of size 32. Success rate: 20%
+Algorithm Simulated_Annealing_Solver took average time: 0.36 and found a best clique of size 32. Success rate: 10%
+Running tests on v400/4 with size 400...
+Graph v400/4 has size 400 and max clique 6
+Algorithm Pivot_Solver took average time: 0.12 and found a best clique of size 6. Success rate: 100%
+Algorithm Branch_and_Bound_Solver took average time: 1.5 and found a best clique of size 6. Success rate: 100%
+Algorithm Genetic_Solver took average time: 0.55 and found a best clique of size 6. Success rate: 90%
+Algorithm Simulated_Annealing_Solver took average time: 0.12 and found a best clique of size 6. Success rate: 40%
+Running tests on v400/5 with size 400...
+Graph v400/5 has size 400 and max clique 14
+Algorithm Pivot_Solver took average time: 2.7e+02 and found a best clique of size 14. Success rate: 100%
+Algorithm Branch_and_Bound_Solver took average time: 2.8e+02 and found a best clique of size 14. Success rate: 100%
+Algorithm Genetic_Solver took average time: 0.86 and found a best clique of size 13. Success rate: 0%
+Algorithm Simulated_Annealing_Solver took average time: 0.21 and found a best clique of size 0. Success rate: 0%
+Running tests on v400/6 with size 400...
+Graph v400/6 has size 400 and max clique 12
+Algorithm Pivot_Solver took average time: 4.4e+01 and found a best clique of size 12. Success rate: 100%
+Algorithm Branch_and_Bound_Solver took average time: 7.6e+01 and found a best clique of size 12. Success rate: 100%
+Algorithm Genetic_Solver took average time: 0.76 and found a best clique of size 11. Success rate: 0%
+Algorithm Simulated_Annealing_Solver took average time: 0.2 and found a best clique of size 0. Success rate: 0%
+Running tests on v400/7 with size 400...
+Graph v400/7 has size 400 and max clique 19
+Algorithm Pivot_Solver took average time: 6e+02 and found a best clique of size 0. Success rate: 0%
+Algorithm Branch_and_Bound_Solver took average time: 6e+02 and found a best clique of size 0. Success rate: 0%
+Algorithm Genetic_Solver took average time: 1.1 and found a best clique of size 19. Success rate: 50%
+Algorithm Simulated_Annealing_Solver took average time: 0.26 and found a best clique of size 0. Success rate: 0%
+Running tests on v400/8 with size 400...
+Graph v400/8 has size 400 and max clique 13
+Algorithm Pivot_Solver took average time: 2.1e+02 and found a best clique of size 13. Success rate: 100%
+Algorithm Branch_and_Bound_Solver took average time: 2.7e+02 and found a best clique of size 13. Success rate: 100%
+Algorithm Genetic_Solver took average time: 0.91 and found a best clique of size 13. Success rate: 40%
+Algorithm Simulated_Annealing_Solver took average time: 0.21 and found a best clique of size 0. Success rate: 0%
+Running tests on v400/9 with size 400...
+Graph v400/9 has size 400 and max clique 14
+Algorithm Pivot_Solver took average time: 6e+02 and found a best clique of size 0. Success rate: 0%
+Algorithm Branch_and_Bound_Solver took average time: 6e+02 and found a best clique of size 0. Success rate: 0%
+Algorithm Genetic_Solver took average time: 0.98 and found a best clique of size 14. Success rate: 50%
+Algorithm Simulated_Annealing_Solver took average time: 0.21 and found a best clique of size 14. Success rate: 10%
+Running tests on v400/10 with size 400...
+Graph v400/10 has size 400 and max clique 44
+Algorithm Pivot_Solver took average time: 6e+02 and found a best clique of size 0. Success rate: 0%
+Algorithm Branch_and_Bound_Solver took average time: 6e+02 and found a best clique of size 0. Success rate: 0%
+Algorithm Genetic_Solver took average time: 2.3 and found a best clique of size 44. Success rate: 20%
+Algorithm Simulated_Annealing_Solver took average time: 0.46 and found a best clique of size 0. Success rate: 0%
+Running tests on v400/11 with size 400...
+Graph v400/11 has size 400 and max clique 5
+Algorithm Pivot_Solver took average time: 0.04 and found a best clique of size 5. Success rate: 100%
+Algorithm Branch_and_Bound_Solver took average time: 0.81 and found a best clique of size 5. Success rate: 100%
+Algorithm Genetic_Solver took average time: 0.46 and found a best clique of size 5. Success rate: 100%
+Algorithm Simulated_Annealing_Solver took average time: 0.1 and found a best clique of size 5. Success rate: 50%
+Running tests on v400/12 with size 400...
+Graph v400/12 has size 400 and max clique 39
+Algorithm Pivot_Solver took average time: 6e+02 and found a best clique of size 0. Success rate: 0%
+Algorithm Branch_and_Bound_Solver took average time: 6e+02 and found a best clique of size 0. Success rate: 0%
+Algorithm Genetic_Solver took average time: 1.6 and found a best clique of size 39. Success rate: 60%
+Algorithm Simulated_Annealing_Solver took average time: 0.4 and found a best clique of size 39. Success rate: 30%
+Running tests on v400/13 with size 400...
+Graph v400/13 has size 400 and max clique 35
+Algorithm Pivot_Solver took average time: 6e+02 and found a best clique of size 0. Success rate: 0%
+Algorithm Branch_and_Bound_Solver took average time: 6e+02 and found a best clique of size 0. Success rate: 0%
+Algorithm Genetic_Solver took average time: 2.0 and found a best clique of size 35. Success rate: 10%
+Algorithm Simulated_Annealing_Solver took average time: 0.39 and found a best clique of size 0. Success rate: 0%
+Running tests on v400/14 with size 400...
+Graph v400/14 has size 400 and max clique 21
+Algorithm Pivot_Solver took average time: 6e+02 and found a best clique of size 0. Success rate: 0%
+Algorithm Branch_and_Bound_Solver took average time: 6e+02 and found a best clique of size 0. Success rate: 0%
+Algorithm Genetic_Solver took average time: 1.3 and found a best clique of size 21. Success rate: 10%
+Algorithm Simulated_Annealing_Solver took average time: 0.27 and found a best clique of size 0. Success rate: 0%
+Running tests on v400/15 with size 400...
+Graph v400/15 has size 400 and max clique 11
+Algorithm Pivot_Solver took average time: 4.3e+01 and found a best clique of size 11. Success rate: 100%
+Algorithm Branch_and_Bound_Solver took average time: 8.6e+01 and found a best clique of size 11. Success rate: 100%
+Algorithm Genetic_Solver took average time: 0.8 and found a best clique of size 11. Success rate: 90%
+Algorithm Simulated_Annealing_Solver took average time: 0.18 and found a best clique of size 11. Success rate: 20%
+Running tests on v400/16 with size 400...
+Graph v400/16 has size 400 and max clique 7
+Algorithm Pivot_Solver took average time: 0.12 and found a best clique of size 7. Success rate: 100%
+Algorithm Branch_and_Bound_Solver took average time: 1.5 and found a best clique of size 7. Success rate: 100%
+Algorithm Genetic_Solver took average time: 0.63 and found a best clique of size 7. Success rate: 60%
+Algorithm Simulated_Annealing_Solver took average time: 0.14 and found a best clique of size 7. Success rate: 10%
+Running tests on v400/17 with size 400...
+Graph v400/17 has size 400 and max clique 13
+Algorithm Pivot_Solver took average time: 1.2e+02 and found a best clique of size 13. Success rate: 100%
+Algorithm Branch_and_Bound_Solver took average time: 1.5e+02 and found a best clique of size 13. Success rate: 100%
+Algorithm Genetic_Solver took average time: 0.78 and found a best clique of size 12. Success rate: 0%
+Algorithm Simulated_Annealing_Solver took average time: 0.2 and found a best clique of size 0. Success rate: 0%
+Running tests on v400/18 with size 400...
+Graph v400/18 has size 400 and max clique 7
+Algorithm Pivot_Solver took average time: 0.3 and found a best clique of size 7. Success rate: 100%
+Algorithm Branch_and_Bound_Solver took average time: 2.9 and found a best clique of size 7. Success rate: 100%
+Algorithm Genetic_Solver took average time: 0.59 and found a best clique of size 7. Success rate: 90%
+Algorithm Simulated_Annealing_Solver took average time: 0.15 and found a best clique of size 7. Success rate: 10%
+Running tests on v400/19 with size 400...
+Graph v400/19 has size 400 and max clique 16
+Algorithm Pivot_Solver took average time: 6e+02 and found a best clique of size 0. Success rate: 0%
+Algorithm Branch_and_Bound_Solver took average time: 6e+02 and found a best clique of size 0. Success rate: 0%
+Algorithm Genetic_Solver took average time: 0.92 and found a best clique of size 16. Success rate: 10%
+Algorithm Simulated_Annealing_Solver took average time: 0.22 and found a best clique of size 16. Success rate: 20%
+Running tests on v400/20 with size 400...
+Graph v400/20 has size 400 and max clique 59
+Algorithm Pivot_Solver took average time: 6e+02 and found a best clique of size 0. Success rate: 0%
+Algorithm Branch_and_Bound_Solver took average time: 6e+02 and found a best clique of size 0. Success rate: 0%
+Algorithm Genetic_Solver took average time: 2.5 and found a best clique of size 59. Success rate: 30%
+Algorithm Simulated_Annealing_Solver took average time: 0.58 and found a best clique of size 0. Success rate: 0%
+Running tests on v400/21 with size 400...
+Graph v400/21 has size 400 and max clique 3
+Algorithm Pivot_Solver took average time: 0.00074 and found a best clique of size 3. Success rate: 100%
+Algorithm Branch_and_Bound_Solver took average time: 0.045 and found a best clique of size 3. Success rate: 100%
+Algorithm Genetic_Solver took average time: 0.24 and found a best clique of size 3. Success rate: 100%
+Algorithm Simulated_Annealing_Solver took average time: 0.1 and found a best clique of size 3. Success rate: 30%
+Running tests on v400/22 with size 400...
+Graph v400/22 has size 400 and max clique 17
+Algorithm Pivot_Solver took average time: 6e+02 and found a best clique of size 0. Success rate: 0%
+Algorithm Branch_and_Bound_Solver took average time: 6e+02 and found a best clique of size 0. Success rate: 0%
+Algorithm Genetic_Solver took average time: 0.98 and found a best clique of size 17. Success rate: 60%
+Algorithm Simulated_Annealing_Solver took average time: 0.24 and found a best clique of size 0. Success rate: 0%
+Running tests on v400/23 with size 400...
+Graph v400/23 has size 400 and max clique 104
+Algorithm Pivot_Solver took average time: 6e+02 and found a best clique of size 0. Success rate: 0%
+Algorithm Branch_and_Bound_Solver took average time: 6e+02 and found a best clique of size 0. Success rate: 0%
+Algorithm Genetic_Solver took average time: 3.4 and found a best clique of size 104. Success rate: 10%
+Algorithm Simulated_Annealing_Solver took average time: 0.96 and found a best clique of size 0. Success rate: 0%
+Running tests on v400/24 with size 400...
+Graph v400/24 has size 400 and max clique 27
+Algorithm Pivot_Solver took average time: 6e+02 and found a best clique of size 0. Success rate: 0%
+Algorithm Branch_and_Bound_Solver took average time: 6e+02 and found a best clique of size 0. Success rate: 0%
+Algorithm Genetic_Solver took average time: 1.3 and found a best clique of size 27. Success rate: 10%
+Algorithm Simulated_Annealing_Solver took average time: 0.32 and found a best clique of size 0. Success rate: 0%
