@@ -7,7 +7,7 @@ import random
 import os
 
 v_sizes = [25, 50, 100, 200, 400]
-num_graphs = 100
+num_graphs = 25
 
 rand_graph_path = 'datasets/randomGraphs/v'
 if not os.path.isdir('datasets/randomGraphs'):
