@@ -15,7 +15,7 @@ max_time_allowed = 600
 
 def run_random_tests(solvers: list, random_files: list[str]):
     with open('randomGraphResults.csv', 'w') as results_file:
-        fieldnames = ['graph_name', 'vertices', 'edges', 'edge_density', 'degree_variance', 'clustering_coefficient', 'k', 'bronKerbosch_time', 'bronKerbosch_max_found', 'bronKerbosch_success', 'branch_and_bound_time', 'branch_and_bound_max_found', 'branch_and_bound_success', 'simulated_annealing_time', 'simulated_annealing_max_found', 'simulated_annealing_success', 'genetic_alg_time', 'genetic_alg_max_found', 'genetic_alg_success']
+        fieldnames = ['graph_name', 'vertices', 'edges', 'edge_density', 'degree_variance', 'clustering_coefficient', 'k', 'bronKerbosch_time', 'bronKerbosch_max_found', 'bronKerbosch_success', 'branch_and_bound_time', 'branch_and_bound_max_found', 'branch_and_bound_success', 'genetic_alg_time', 'genetic_alg_max_found', 'genetic_alg_success', 'simulated_annealing_time', 'simulated_annealing_max_found', 'simulated_annealing_success']
         
         results_file.write(','.join(fieldnames) + '\n')
         for random_file in random_files:
