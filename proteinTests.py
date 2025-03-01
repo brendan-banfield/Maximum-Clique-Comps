@@ -125,7 +125,7 @@ if __name__ == '__main__':
         except:
             print(f'Failed to load graph from {protein_file}')
             raise FileNotFoundError
-    run_protein_tests([bronKerboschClass, branch_and_boundClass, genetic_algClass, simulatedAnnealingClass], protein_file)
+    run_protein_tests([bronKerboschClass, branch_and_boundClass, genetic_algClass, simulatedAnnealingClass], protein_files)
     # test_increasing_graphs([bronKerboschClass, branch_and_boundClass, simulatedAnnealingClass, genetic_algClass], n_0, edge_probability)
 
 
