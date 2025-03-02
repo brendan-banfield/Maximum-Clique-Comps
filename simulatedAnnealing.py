@@ -47,8 +47,21 @@ class Simulated_Annealing_Solver:
         if self.completed:
             return
         v1 = random.randint(0, self.k - 1)
-        v2 = random.randint(self.k, self.graph.vertices - 1)
-        c_delta = self.connectedness_delta(v1, v2)
+
+        misses = 0
+        connectedness_cache = {}
+        cache_hits = {}
+        while misses < 8 * self.graph.vertices:
+        # while misses < 8 * self.graph.vertices:
+            v2 = random.randint(self.k, self.graph.vertices - 1)
+            if v2 in connectedness_cache:
+                c_delta = connectedness_cache[v2]
+            else:
+                c_delta = self.connectedness_delta(v1, v2)
+                connectedness_cache[v2] = c_delta
+            if c_delta >= 0:
+                break
+            misses += 1
 
         if c_delta > 0:
             self.improved_score += 1
@@ -65,7 +78,7 @@ class Simulated_Annealing_Solver:
                 self.succeeded = True
                 return
                 # return f"Succeeded: {permutation[:k]}"
-            
+        # print(self.T)
         self.T *= self.alpha
         if self.T < self.T_f:
             self.completed = True
@@ -117,15 +130,20 @@ class Simulated_Annealing_Solver:
 if __name__ == "__main__":
         
     # Graph.test_algorithm(Simulated_Annealing_Solver, 100, 0.001, 0.9998)
-    protein_graph = Graph.get_graph_from_dataset('2UV8I_2J6IA_13107')
+    graph = Graph.get_graph_from_dataset('keller4')
     # hard_graph = Graph.get_graph_from_dataset('C125.9')
-    Simulated_Annealing_Solver.binary_search(protein_graph, 100, 0.001, 0.9998, k_min=68, num_attempts=10, k_max=70)
+    # Simulated_Annealing_Solver.binary_search(protein_graph, 100, 0.001, 0.9998, k_min=68, num_attempts=10, k_max=70)
     # solver = Simulated_Annealing_Solver(protein_graph, 89, 100, 0.001, 0.9998) 
     # print(solver.run())
     # graph.visualize_algorithm(solver, 0.01, False)
-    # for i in range(20):
-    #     solver = Simulated_Annealing_Solver(graph, 16, 100, 0.001, 0.9998) 
-    #     print(solver.run())
-    #     # if solver.succeeded:
-    #     print(solver.best_nodes)
-    #     # print(simulated_annealing(graph, 44, 100, 0.001, 0.9998))
+    successes = 0
+    for i in range(5):
+        solver = Simulated_Annealing_Solver(graph, 11, 100, 0.001, 0.9995) 
+        solver.run()
+        if solver.succeeded:
+            successes += 1
+        print(solver.succeeded)
+            
+        #print(solver.best_nodes)
+        # print(simulated_annealing(graph, 44, 100, 0.001, 0.9998))
+    print(successes / 5)

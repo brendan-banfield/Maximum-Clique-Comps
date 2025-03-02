@@ -20,7 +20,7 @@ def run_DIMACS_test(solvers: list, DIMACS_file: str):
     
     graph = Graph.get_graph_from_dataset(DIMACS_file)
     print(f'Running tests on {DIMACS_file} with size {graph.vertices}...')
-    k = 0
+    k = max_cliques[DIMACS_file]
     results = []
     for (solver_class, num_trials, args, kwargs, is_exact) in solvers:
         # print(f'{solver_class.__name__}:')
@@ -64,8 +64,6 @@ def run_DIMACS_test(solvers: list, DIMACS_file: str):
 
             tot_time += time_taken
             
-            if is_exact or clique_found > k:
-                k = clique_found
             cliques_found.append(clique_found)
 
             # print(f'Algorithm {solver_class.__name__} took time: {time2 - time1}. Succeeded: {solver.succeeded}')
@@ -105,51 +103,75 @@ if __name__ == '__main__':
     genetic_algClass = [genetic_alg.Genetic_Solver, 10, [], {}, False]
     n_0 = 120
     edge_probability = 0.99
-    DIMACS_files = [
+    max_cliques = {
+        'c-fat200-1': 12,
+        'c-fat500-1': 14,
+        'johnson16-2-4': 8,
+        'johnson32-2-4': 16,
+        'keller4': 11,
+        'keller5': 27,
+        'keller6': 59,
+        'hamming10-2': 512,
+        'hamming8-2': 128,
+        'san200_0.7_1': 30,
+        'san400_0.5_1': 13,
+        'san400_0.9_1': 100,
+        'sanr200_0.7': 18,
+        'sanr400_0.5': 13,
+        'san1000': 15,
+        'brock200_1': 21,
+        'brock400_1': 27,
+        'brock800_1': 23,
+        'p_hat300-1': 8,
+        'p_hat500-1': 9,
+        'p_hat700-1': 11,
+        'p_hat1000-1': 10,
+        'p_hat1500-1': 12,
+        'MANN_a27': 126,
+        'MANN_a45': 345
+    }
+    files = [
+        'c-fat200-1',
+        'c-fat500-1',
+        'johnson16-2-4',
+        'johnson32-2-4',
+        'keller4',
+        'keller5',
+        'keller6',
+        'hamming10-2',
+        'hamming8-2',
+        'san200_0.7_1',
+        'san400_0.5_1',
+        'san400_0.9_1',
         'sanr200_0.7',
-        'sanr400_0.5',
+        'sanr400_0.5',  
+        'san1000',
         'brock200_1',
+        'brock400_1',
+        'brock800_1',
         'p_hat300-1',
         'p_hat500-1',
         'p_hat700-1',
-        'p_hat1500-1'
-    ]
-    # files = [
-    #     'c-fat200-1',
-    #     'c-fat500-1',
-    #     'johnson16-2-4',
-    #     'johnson32-2-4',
-    #     'keller4',
-    #     'keller5',
-    #     'keller6',
-    #     'hamming10-2',
-    #     'hamming8-2',
-    #     'san200_0.7_1',
-    #     'san400_0.5_1',
-    #     'san400_0.9_1',
-    #     'sanr200_0.7',
-    #     'sanr400_0.5',
-    #     'san1000',
-    #     'brock200_1',
-    #     'brock400_1',
-    #     'brock800_1',
-    #     'p_hat300-1',
-    #     'p_hat500-1',
-    #     'p_hat700-1',
-    #     'p_hat1000-1',
-    #     'p_hat1500-1',
-    #     'MANN_a27',
-    #     'MANN_a45'
+        'p_hat1000-1',
+        'p_hat1500-1',
+        'MANN_a27',
+        'MANN_a45'
 
-    # ]
-    for DIMACS_file in DIMACS_files:
+    ]
+    for DIMACS_file in files:
         
         try:
             graph = Graph.get_graph_from_dataset(DIMACS_file)
         except:
             print(f'Failed to load graph from {DIMACS_file}')
             raise FileNotFoundError
-    run_DIMACS_tests([bronKerboschClass, branch_and_boundClass, genetic_algClass, simulatedAnnealingClass], DIMACS_files)
+        try:
+            max_clique_size = max_cliques[DIMACS_file]
+        except:
+            print(f"dict key {DIMACS_file} missing")
+            raise KeyError
+    run_DIMACS_tests([simulatedAnnealingClass], files)
+    # run_DIMACS_tests([bronKerboschClass, branch_and_boundClass, genetic_algClass, simulatedAnnealingClass], files)
     # test_increasing_graphs([bronKerboschClass, branch_and_boundClass, simulatedAnnealingClass, genetic_algClass], n_0, edge_probability)
 
 
