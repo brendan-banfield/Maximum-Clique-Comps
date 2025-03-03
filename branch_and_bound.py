@@ -224,13 +224,17 @@ class Branch_and_Bound_Solver:
 
 def main():
     # Graph.test_algorithm(Branch_and_Bound_Solver)
-    graph = Graph.get_graph_from_dataset('p_hat300-1')
+    graph = Graph.get_graph_from_dataset('v25/2')
     solver = Branch_and_Bound_Solver(graph)
     import time
     start_time = time.time()
     solver.run()
     end_time = time.time()
+    # alg finds: [23, 22, 21, 14, 12, 11, 9, 8, 7, 5, 4, 3, 1, 0]
+    # (sorted: [0, 1, 3, 4, 5, 7, 8, 9, 11, 12, 14, 21, 22, 23])
+    # correct max clique: [0, 1, 3, 4, 5, 7, 8, 9, 11, 12, 19, 21, 22, 23, 24]
     print(f"Max clique found is size: {solver.get_maximum_clique()}")
+    print(f"clique elements: {solver.max_clique_vertices}")
     print(f"Time taken: {end_time - start_time} seconds")
     # clique = solver.max_clique_vertices
     # print(f"Vertices in clique: {clique}")
