@@ -287,9 +287,16 @@ class Graph:
             num_vertices = int(lines[cur_line].split()[2])
             # num_edges = int(lines[cur_line].split()[3])
             edges = []
+            zero_indexed = False
             for line in lines[cur_line + 1:]:
                 if line[0] == 'e':
-                    edges.append((int(line.split()[1]) - 1, int(line.split()[2]) - 1))
+                    verts = line.split()[1:]
+                    if verts[0] == '0':
+                        zero_indexed = True
+                    if zero_indexed:
+                        edges.append((int(verts[0]), int(verts[1])))
+                    else:
+                        edges.append((int(verts[0]) - 1, int(verts[1]) - 1))
             return Graph(num_vertices, edges)
             # return Graph(num_vertices, edges, max_clique_size=clique_size, max_clique_elements=clique)
 
