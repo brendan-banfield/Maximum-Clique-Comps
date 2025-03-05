@@ -291,7 +291,7 @@ class Graph:
             for line in lines[cur_line + 1:]:
                 if line[0] == 'e':
                     verts = line.split()[1:]
-                    if verts[0] == '0':
+                    if verts[0] == '0' or verts[1] == '0':
                         zero_indexed = True
                     if zero_indexed:
                         edges.append((int(verts[0]), int(verts[1])))
