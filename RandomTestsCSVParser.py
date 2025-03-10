@@ -36,22 +36,57 @@ def read_line(line):
     return data_dict
 
 
-with open("randomGraphResults.csv", "r") as f:
+with open("randomGraphResults7.csv", "r") as f:
 
     lines = f.readlines()
 
 data = [read_line(line) for line in lines[1:]]
 # data = [read_line(line) for line in lines[101:]]
 xs = [d["size"] for d in data]
+edges = [d["edges"] for d in data]
+edge_densities = [d["edge_density"] for d in data]
 bk_times = [d["bronKerbosch_time"] for d in data]
 bb_times = [d["branch_and_bound_time"] for d in data]
+sa_times = [d["simulated_annealing_time"] for d in data]
+ga_times = [d["genetic_alg_time"] for d in data]
 sa_success = [d["simulated_annealing_success"] for d in data]
 ga_success = [d["genetic_alg_success"] for d in data]
+bk_success = [d["bronKerbosch_success"] for d in data]
+bb_success = [d["branch_and_bound_success"] for d in data]
 
-# plt.plot(sizes, clique_sizes, label="Clique Size")
-# plt.show()
-plt.scatter(xs, sa_success, label="bk")
-plt.scatter([x + 5 for x in xs], ga_success, label="bb")
+start_idx = xs.index(60)
+end_idx = xs.index(75)
+dot_size = 50
+plt.scatter(edge_densities[start_idx:end_idx], bk_times[start_idx:end_idx], label="Bron Kerbosch", sizes=[dot_size])
+plt.scatter(edge_densities[start_idx:end_idx], bb_times[start_idx:end_idx], label="Branch and Bound", sizes=[dot_size])
+plt.scatter(edge_densities[start_idx:end_idx], sa_times[start_idx:end_idx], label="Simulated Annealing", sizes=[dot_size])
+plt.scatter(edge_densities[start_idx:end_idx], ga_times[start_idx:end_idx], label="Genetic Algorithm", sizes=[dot_size])
+plt.legend()
+ax = plt.gca()
+ax.set_xlabel("Edge Density")
+ax.set_ylabel("Time (s)")
+plt.title("Algorithm runtimes for |V|=50")
+plt.show()
+
+start_idx = xs.index(100)
+end_idx = xs.index(200)
+plt.scatter(edge_densities[start_idx:end_idx], bk_times[start_idx:end_idx], label="Bron Kerbosch", sizes=[dot_size])
+plt.scatter(edge_densities[start_idx:end_idx], bb_times[start_idx:end_idx], label="Branch and Bound", sizes=[dot_size])
+plt.scatter(edge_densities[start_idx:end_idx], sa_times[start_idx:end_idx], label="Simulated Annealing", sizes=[dot_size])
+plt.scatter(edge_densities[start_idx:end_idx], ga_times[start_idx:end_idx], label="Genetic Algorithm", sizes=[dot_size*0.2])
+plt.legend()
+ax = plt.gca()
+plt.title("Algorithm runtimes for |V|=100")
+ax.set_xlabel("Edge Density")
+ax.set_ylabel("Time (s)")
+plt.show()
+
+
+
+plt.scatter(edge_densities[start_idx:end_idx], ga_success[start_idx:end_idx], label="gen alg", sizes=[dot_size])
+plt.scatter(edge_densities[start_idx:end_idx], sa_success[start_idx:end_idx], label="sim ann", sizes=[dot_size*0.2])
+# plt.scatter(edge_densities[start_idx:end_idx], bk_success[start_idx:end_idx], label="bk")
+# plt.scatter(edge_densities[start_idx:end_idx], bb_success[start_idx:end_idx], label="bb")
 plt.legend()
 plt.show()
 
