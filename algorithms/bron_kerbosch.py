@@ -1,4 +1,4 @@
-from algorithms.lib.graphs import Graph
+from lib.graphs import Graph
 import time
 
 class Bron_Kerbosch_Solver:
@@ -6,8 +6,6 @@ class Bron_Kerbosch_Solver:
     def __init__(self, graph: Graph):
         self.graph = graph
         self.adjacencySets = self.graph.get_adj_sets()
-        #self.maximal_cliques = []
-        #self.maximum_clique = set()
         self.maximum_clique_size = 0
         self.succeeded = False
     
@@ -116,8 +114,10 @@ class Pivot_Solver(Bron_Kerbosch_Solver):
             X.add(v)
 
 if __name__ == "__main__":
-    baby_graph = Graph(5, [(0, 1), (1, 2), (0, 2), (3, 1), (3, 4)])
-    solver = Pivot_Solver(baby_graph)
+    Graph.test_algorithm(Pivot_Solver)
+    
+
+
     # graph = Graph(7, [(0,1), (0,2), (0,3), (1,2), (1,3), (2,3), (1,4), (3,4), (4,6), (3,5)])
     # solver = Bron_Kerbosch_Solver(graph)
     # med_graph = Graph(25, [(0, 1), (0, 2), (0, 3), (0, 4), (0, 5), (0, 6), (0, 7), (0, 8), (0, 9), (0, 10), (0, 11), (0, 12), (0, 13), (0, 14), (0, 15), (0, 16), (0, 17), (0, 18), (0, 19), (0, 20), (0, 21), (0, 22), (0
@@ -136,8 +136,3 @@ if __name__ == "__main__":
     # time2 = time.time()
     # print("clique: {0} in time {1}".format(len(solver.maximum_clique), time2-time1))
     # #print(solver.maximal_cliques)
-    Graph.test_algorithm(No_Pivot_Solver)
-    
-
-
-    

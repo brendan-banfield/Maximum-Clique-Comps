@@ -1,4 +1,4 @@
-from algorithms.lib.graphs import Graph
+from lib.graphs import Graph
 import random
 import numpy as np # to sample with replacement
 import sys

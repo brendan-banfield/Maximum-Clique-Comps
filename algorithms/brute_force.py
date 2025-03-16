@@ -1,4 +1,4 @@
-from algorithms.lib.graphs import Graph
+from lib.graphs import Graph
 from math import pow
 from bitarray import bitarray
 
