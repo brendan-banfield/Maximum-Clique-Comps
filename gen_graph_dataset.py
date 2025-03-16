@@ -1,4 +1,4 @@
-import graphs as graphs
+import algorithms.lib.graphs as graphs
 import random
 import os
 

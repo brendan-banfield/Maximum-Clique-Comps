@@ -1,9 +1,9 @@
-from graphs import Graph
+from algorithms.lib.graphs import Graph
 import time
 
-import simulated_annealing
-import branch_and_bound
-import bron_kerbosch
+from algorithms import simulated_annealing
+from algorithms import branch_and_bound
+from algorithms import bron_kerbosch
 
 def test_increasing_graphs(solvers: list, starting_size, edge_probability):
     # each element in solver_classes should be (algorithm_class, *args, **kwargs)

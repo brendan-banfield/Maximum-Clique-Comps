@@ -1,4 +1,4 @@
-from graphs import Graph
+from algorithms.lib.graphs import Graph
 import os
 import pandas as pd
 import matplotlib.pyplot as plt

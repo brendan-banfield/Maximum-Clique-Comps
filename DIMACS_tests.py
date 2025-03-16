@@ -1,9 +1,9 @@
-from graphs import Graph
+from algorithms.lib.graphs import Graph
 
-import simulated_annealing
-import branch_and_bound
-import bron_kerbosch
-import genetic_alg
+from algorithms import simulated_annealing
+from algorithms import branch_and_bound
+from algorithms import bron_kerbosch
+from algorithms import genetic_alg
 
 import time
 import multiprocessing
