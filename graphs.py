@@ -252,10 +252,10 @@ class Graph:
     def get_graph_from_dataset(dataset_name: str) -> 'Graph':
         if os.path.exists(f'datasets/DIMACS/{dataset_name}.clq'):
             return Graph.import_DIMACS_graph(f'DIMACS/{dataset_name}.clq')
-        elif os.path.exists(f'datasets/proteinProductGraphs/{dataset_name}'):
-            return Graph.import_DIMACS_graph(f'proteinProductGraphs/{dataset_name}')
-        elif os.path.exists(f'datasets/randomGraphs/{dataset_name}'):
-            return Graph.import_DIMACS_graph(f'randomGraphs/{dataset_name}')
+        elif os.path.exists(f'datasets/protein_product_graphs/{dataset_name}'):
+            return Graph.import_DIMACS_graph(f'protein_product_graphs/{dataset_name}')
+        elif os.path.exists(f'datasets/random_graphs/{dataset_name}'):
+            return Graph.import_DIMACS_graph(f'random_graphs/{dataset_name}')
         else:
             raise ValueError(f'Dataset {dataset_name} not found')
         

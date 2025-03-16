@@ -1,7 +1,3 @@
-# based on this paper:
-# https://h3turing.cs.hbg.psu.edu/mspapers/sources/bo-huang.pdf
-
-
 from graphs import Graph
 import random
 import numpy as np # to sample with replacement
@@ -112,11 +108,8 @@ class Genetic_Solver:
         return clique.count()
 
     def fitness_scaled(self, clique):
-        # change this
         scale_fn = np.sqrt
         return scale_fn(self.fitness(clique))
-
-    
     
     def select_parents(self):
         # scale clique size with np.sqrt. Since cliques are all locally maximal, clique.count() >= 2 if graph connected,

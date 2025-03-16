@@ -1,4 +1,0 @@
-3ZY0D_3ZY1A_110: max clique 52
-3P0KA_3GWLB_0: max clique 89
-2UV8I_2J6IA_13107: best known 69
-1KZKA_3KT2A_78: best known 247
