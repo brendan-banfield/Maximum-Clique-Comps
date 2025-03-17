@@ -136,8 +136,6 @@ class Graph:
     **kwargs: any keyword arguments to be passed to the algorithm
     returns: list of integers or None
     '''
-    # def test_algorithm(self, algorithm: callable, k, *args, **kwargs) -> list[int]:
-    #     return algorithm(self, k, *args, **kwargs)
     def test_algorithm(algorithm_class, *args, **kwargs):
         baby_graph = Graph(5, [(0, 1), (1, 2), (0, 2), (3, 1), (3, 4)])
 
@@ -149,15 +147,14 @@ class Graph:
         22), (11, 23), (11, 24), (12, 13), (12, 14), (12, 15), (12, 16), (12, 17), (12, 18), (12, 20), (12, 21), (12, 22), (12, 23), (12, 24), (13, 14), (13, 15), (13, 16), (13, 17), (13, 18), (13, 19), (13, 20), (13, 21), (13, 23), (13, 24), (14, 15), (14, 16), (14, 17), (14, 18), (14, 19), (14, 20), (14, 22), (14, 23), (14, 24), (15, 16), (15, 17), (15, 18), (15, 19), (15, 20), (15, 21), (15, 22), (15, 23), (15, 24), (16, 17), (16, 18), (16, 19), (16, 20), (16, 21), (16, 22), (16, 23), (16, 24), (17, 18), (17, 19), (17, 20), (17, 21), (17, 22), (17, 23), (17, 24), (18, 19), (18, 20), (18, 21), (18, 22), (18, 23), (18, 24), (19, 20), (19, 21), (19, 22), (19, 23), (19, 24), (20, 21), (20, 22), (20, 23), (20, 24), (21, 22), (21, 23), (21, 24), (22, 23), (22, 24), (23, 24)])
         
         hard_graph = Graph.get_graph_from_dataset('C125.9')
-        test_cases = [("Easy graph", baby_graph, 3, True), 
-                      ("Easy graph", baby_graph, 4, False), 
-                      ("Medium graph (C125.9)", med_graph, 20, True), 
-                      ("Medium graph (C125.9)", med_graph, 21, False), 
-                      ("Hard graph (C125.9)", hard_graph, 34, True), 
+        test_cases = [("Easy graph", baby_graph, 3, True),
+                      ("Easy graph", baby_graph, 4, False),
+                      ("Medium graph", med_graph, 20, True),
+                      ("Medium graph", med_graph, 21, False),
+                      ("Hard graph (C125.9)", hard_graph, 34, True),
                       ("Hard graph (C125.9)", hard_graph, 35, False)
                       ]
         for name, graph, k, should_find in test_cases:
-            # print(f"Testing {algorithm_class.__name__} on {name} with k={k} (Should {'find' if should_find else 'not find'} a clique)")
             alg_instance = None
             if algorithm_class.is_decision_problem:
                 alg_instance = algorithm_class(graph, k, *args, **kwargs)
@@ -212,9 +209,6 @@ class Graph:
                 lines.append(ax.plot([], [], color=missing_edge)[0])
         points.set_color([active_color if v in active_nodes else inactive_color for v in range(self.vertices)])
 
-        # for v in range(self.vertices):
-        #     for u in self.adj_list[v]:
-        #         ax.plot([x_positions[v], x_positions[u]], [y_positions[v], y_positions[u]], color=inactive_color)
 
         def update_display(i):
             algorithm_instance.update()
@@ -267,21 +261,6 @@ class Graph:
             # the files do not have a consistent format for the header, which may or may not contain information about how big
             # the largest clique is and possibly what nodes are in it. We can come back to this, but for now you should check manually.
 
-            # while not lines[cur_line].startswith('c Graph Size:'):
-            #     cur_line += 1
-            # clique_size = int(lines[cur_line].split()[5])
-
-            # while not lines[cur_line].startswith('c Clique Elements are:'):
-            #     cur_line += 1   
-            # cur_line += 1
-            # clique = []
-            # while len(lines[cur_line]) > 2:
-            #     clique_line = lines[cur_line].split()[1:]
-            #     clique_members = [int(x) - 1 for x in clique_line]
-            #     clique += clique_members
-            #     cur_line += 1
-            # assert len(clique) == clique_size
-
             while not lines[cur_line].startswith('p'):
                 cur_line += 1
             num_vertices = int(lines[cur_line].split()[2])
@@ -298,7 +277,6 @@ class Graph:
                     else:
                         edges.append((int(verts[0]) - 1, int(verts[1]) - 1))
             return Graph(num_vertices, edges)
-            # return Graph(num_vertices, edges, max_clique_size=clique_size, max_clique_elements=clique)
 
     '''
     Graph properties:
@@ -364,10 +342,6 @@ def test_increasing_graphs(solvers: list, starting_size, edge_probability):
 
 
 if __name__ == '__main__':
-    # graph = Graph.get_graph_from_dataset('p_hat300-3')
     graph = Graph(5, [(0, 1), (1, 2), (0, 2), (3, 1), (3, 4)] )
     print(graph.vertices)
     print(graph.get_adj_matrix())
-    # adj_list = graph.get_adj_list()
-    # print([len(adj_list[i]) for i in range(graph.vertices)])
-    # print([len(adj_list[i]) for i in range(graph.vertices)])

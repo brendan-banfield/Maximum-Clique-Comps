@@ -142,5 +142,6 @@ if __name__ == "__main__":
         solver.run()
         if solver.succeeded:
             successes += 1
-        print(solver.succeeded)
-    print(successes / 5)
+        print("Success? "+ str(solver.succeeded))
+    
+    print("Accuracy: " + str(successes / 5))
