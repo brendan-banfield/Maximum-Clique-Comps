@@ -25,7 +25,8 @@ class Simulated_Annealing_Solver:
         # return v2_connectedness - v1_connectedness
         # the 1 liner below does that ^
     
-        return sum([self.adjecency_matrix[self.permutation[v2]][self.permutation[v]] - self.adjecency_matrix[self.permutation[v1]][self.permutation[v]] for v in range(self.k) if v != v1])
+        return sum([self.adjecency_matrix[self.permutation[v2]][self.permutation[v]] - self.adjecency_matrix[self.permutation[v1]][self.permutation[v]] 
+                    for v in range(self.k) if v != v1])
 
     def num_missing_edges(self):
         return sum([1 for i in range(self.k-1) for j in range(i + 1, self.k) if not self.adjecency_matrix[self.permutation[i]][self.permutation[j]]])
@@ -142,7 +143,4 @@ if __name__ == "__main__":
         if solver.succeeded:
             successes += 1
         print(solver.succeeded)
-            
-        #print(solver.best_nodes)
-        # print(simulated_annealing(graph, 44, 100, 0.001, 0.9998))
     print(successes / 5)

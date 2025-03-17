@@ -2,12 +2,6 @@ from lib.graphs import Graph
 import random
 import numpy as np
 import sys
-
-'''
-run
-pip install bitarray
-if missing import
-'''
 from bitarray import bitarray
 
 class Genetic_Solver:
