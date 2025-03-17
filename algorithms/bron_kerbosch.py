@@ -17,12 +17,12 @@ class Bron_Kerbosch_Solver:
             self.succeeded = True
         return self.maximum_clique_size
 
+    '''Returns true if it found a clique.'''
     def found_clique(self):
         return self.succeeded
 
     '''Creates the input sets for the solver function, and calls the function.
-    Returns the # of elements of the maximum clique.
-    Could be easily changed to return the clique itself.'''
+    Returns the size of the maximum clique.'''
     def run(self):
         P = {i for i in range(self.graph.vertices)}
         R = set()
@@ -32,8 +32,11 @@ class Bron_Kerbosch_Solver:
         
 
 class No_Pivot_Solver(Bron_Kerbosch_Solver):
-    '''solves Bron Kerbosch without a pivot vertex'''
+
+    '''Basic version. Solves Bron Kerbosch without a pivot vertex.
+    Input: sets P, R, X. In the first input, P should contain all the nodes from the graph.'''
     def solver(self, P, R, X):
+        #base cases
         if not P:
             if not X:
                 if self.maximum_clique_size > 0:
@@ -43,6 +46,7 @@ class No_Pivot_Solver(Bron_Kerbosch_Solver):
                     self.maximum_clique_size = len(R)
             return
         
+        #loop over every node in P
         list_P = list(P)
         while list_P:
             v = list_P[0]
@@ -59,8 +63,11 @@ class No_Pivot_Solver(Bron_Kerbosch_Solver):
 
 
 class Pivot_Solver(Bron_Kerbosch_Solver):
-    '''solves Bron Kerbosch with a pivot vertex'''
+    
+    '''Solves Bron Kerbosch with a pivot vertex.
+    Input: sets P, R, X. In the first input, P should contain all the nodes from the graph.'''
     def solver(self, P, R, X):
+        #base cases
         if not P:
             if not X:
                 if self.maximum_clique_size > 0:
@@ -70,6 +77,7 @@ class Pivot_Solver(Bron_Kerbosch_Solver):
                     self.maximum_clique_size = len(R)
             return
         
+        #choose pivot node
         max_nbrs = 0
         pivot_nbrs = set()
         for node in (P | X):
@@ -78,6 +86,7 @@ class Pivot_Solver(Bron_Kerbosch_Solver):
                 max_nbrs = len(nbrs_of_node & P)
                 pivot_nbrs = nbrs_of_node
 
+        #loop over non-neighbors of the pivot
         loop_P = P - pivot_nbrs
         list_P = list(loop_P)
         while list_P:
@@ -87,7 +96,7 @@ class Pivot_Solver(Bron_Kerbosch_Solver):
             nbrs_v = self.adjacencySets[v]
             new_P = P & nbrs_v
             new_X = X & nbrs_v
-            self.solver(new_P, new_R, new_X)
+            self.solver(new_P, new_R, new_X)    
             P.remove(v)
             list_P.remove(v)
             X.add(v)

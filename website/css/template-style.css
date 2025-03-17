@@ -29,9 +29,15 @@
   text-align: center; /* Centers the content inside the team member block */
 }
 
+.my-image {
+  height: 350px;    
+}
+
 .my-image img {
-  width: 100%; /* Makes sure the image fits within its container */
-  height: auto;
+  width: 100%; 
+  height: 350px;
+  object-fit: cover;
+  display: block;
 }
 
 
