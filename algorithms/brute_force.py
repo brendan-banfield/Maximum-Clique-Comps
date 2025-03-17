@@ -1,6 +1,7 @@
 from lib.graphs import Graph
 from math import pow
 from bitarray import bitarray
+import sys
 
 class Brute_Force_Solver:
     is_decision_problem = True
@@ -37,4 +38,13 @@ class Brute_Force_Solver:
         return max([clique.count(1) for clique in self.cliques_found])
 
 
-Graph.test_algorithm(Brute_Force_Solver)
+if __name__ == "__main__":
+    args = sys.argv
+    if len(args) > 1:
+        graph = Graph.get_graph_from_dataset(args[1])
+    else:
+        graph = Graph.get_graph_from_dataset("keller4")
+        
+    solver = Brute_Force_Solver(graph)
+    graph.print_properties()
+    print(solver.run())

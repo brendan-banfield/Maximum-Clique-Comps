@@ -1,5 +1,4 @@
 from lib.graphs import Graph
-import time
 
 class Bron_Kerbosch_Solver:
     is_decision_problem = False
@@ -37,7 +36,6 @@ class No_Pivot_Solver(Bron_Kerbosch_Solver):
     def solver(self, P, R, X):
         if not P:
             if not X:
-                # self.maximal_cliques.append(R)
                 if self.maximum_clique_size > 0:
                     if len(R) > self.maximum_clique_size:
                         self.maximum_clique_size = len(R)

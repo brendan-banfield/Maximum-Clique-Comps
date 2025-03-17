@@ -1,5 +1,6 @@
 from lib.graphs import Graph
 import time
+import sys
 
 
 class Branch_and_Bound_Solver:
@@ -137,7 +138,12 @@ class Branch_and_Bound_Solver:
                 return Qmax
 
 def main():
-    graph = Graph.get_graph_from_dataset('v25/2')
+    args = sys.argv
+    if len(args) > 1:
+        graph = Graph.get_graph_from_dataset('v25/2')
+    else:
+        graph = Graph.get_graph_from_dataset('keller4')
+    
     solver = Branch_and_Bound_Solver(graph)
     start_time = time.time()
     solver.run()

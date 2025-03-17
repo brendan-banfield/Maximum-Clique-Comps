@@ -1,6 +1,7 @@
 from lib.graphs import Graph
 import random
 import math
+import sys
 
 class Simulated_Annealing_Solver:
     is_decision_problem = True
@@ -128,14 +129,12 @@ class Simulated_Annealing_Solver:
         print(f"Final k: {k_min}")
 
 if __name__ == "__main__":
-        
-    # Graph.test_algorithm(Simulated_Annealing_Solver, 100, 0.001, 0.9998)
-    graph = Graph.get_graph_from_dataset('keller4')
-    # hard_graph = Graph.get_graph_from_dataset('C125.9')
-    # Simulated_Annealing_Solver.binary_search(protein_graph, 100, 0.001, 0.9998, k_min=68, num_attempts=10, k_max=70)
-    # solver = Simulated_Annealing_Solver(protein_graph, 89, 100, 0.001, 0.9998) 
-    # print(solver.run())
-    # graph.visualize_algorithm(solver, 0.01, False)
+    args = sys.argv
+    if len(args) > 1:
+        graph = Graph.get_graph_from_dataset(args[1])
+    else:
+        graph = Graph.get_graph_from_dataset("keller4")
+    
     successes = 0
     for i in range(5):
         solver = Simulated_Annealing_Solver(graph, 11, 100, 0.001, 0.9995) 

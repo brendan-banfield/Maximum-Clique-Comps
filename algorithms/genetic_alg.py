@@ -1,6 +1,6 @@
 from lib.graphs import Graph
 import random
-import numpy as np # to sample with replacement
+import numpy as np
 import sys
 
 '''
@@ -211,7 +211,10 @@ if __name__ == '__main__':
     args = sys.argv
     if len(args) > 1:
         graph = Graph.get_graph_from_dataset(args[1])
-        solver = Genetic_Solver(graph)
-        graph.print_properties()
-        print(solver.run())
+    else:
+        graph = Graph.get_graph_from_dataset("keller4")
+    
+    solver = Genetic_Solver(graph)
+    graph.print_properties()
+    print(solver.run())
         
