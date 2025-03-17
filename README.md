@@ -1,9 +1,10 @@
 # Not Clique-bait: Algorithmic Approaches to the Maximum Clique Problem
 Carleton College Computer Science Comps 2025
+
 Authors: Brendan Banfield, Aaron Banse, Kellen Knop, Sophie Quinn
 
 # Project Description:
-We found and implemented four algorithms that solve the Maximum Clique problem. We compared their runtimes and gauged their performances on different types of graphs. To find out more, visit our website on the [CS Comps Archive](https://www.cs.carleton.edu/cs_comps/) 
+We found and implemented four algorithms that solve the Maximum Clique problem. We compared their runtimes and gauged their performances on different types of graphs. To find out more, visit our website on the [CS Comps Archive](https://www.cs.carleton.edu/cs_comps/).
 
 # Table of Contents:
 - algorithms
@@ -34,8 +35,8 @@ data parsing files:
 
 # Where we got our data
 - [DIMACS](https://iridia.ulb.ac.be/~fmascia/maximum_clique/DIMACS-benchmark) benchmark datasets from 1992-93
-- [protein product graphs](https://e6.ijs.si/~matjaz/maxclique/ProteinProduct/) based on [this paper](https://pubs.acs.org/doi/10.1021/ci4002525) from Depolli et al. (2013)
-- generated our own graphs with randomly populated edges based on a given edge density
+- [Protein product graphs](https://e6.ijs.si/~matjaz/maxclique/ProteinProduct/) based on [this paper](https://pubs.acs.org/doi/10.1021/ci4002525) from Depolli et al. (2013)
+- Generated our own graphs with randomly populated edges based on a given edge density
 
 
 # graphs.py
